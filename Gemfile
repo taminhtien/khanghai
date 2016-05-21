@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bundler', '>= 1.8.4'
 gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
@@ -12,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'slim-rails'
 gem 'simple_form'
+gem 'rails-assets-bootstrap-material-design', source: 'https://rails-assets.org'
 
 group :development, :test do
   gem 'rspec-rails'
