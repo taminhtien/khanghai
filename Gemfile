@@ -12,7 +12,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'slim-rails'
 gem 'simple_form'
-gem 'bootstrap-material-design'
 
 group :development, :test do
   gem 'rspec-rails'
