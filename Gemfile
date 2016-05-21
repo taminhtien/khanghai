@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim-rails'
 gem 'simple_form'
 gem 'rails-assets-bootstrap-material-design', source: 'https://rails-assets.org'
+gem 'friendly_id'
 
 group :development, :test do
   gem 'rspec-rails'
