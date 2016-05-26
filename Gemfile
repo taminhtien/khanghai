@@ -15,6 +15,7 @@ gem 'slim-rails'
 gem 'simple_form'
 gem 'rails-assets-bootstrap-material-design', source: 'https://rails-assets.org'
 gem 'friendly_id'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'rspec-rails'
