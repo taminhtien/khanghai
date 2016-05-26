@@ -1,0 +1,27 @@
+.shared-header-container
+  .top
+    .container
+      .top__tagline Khang Hai Lawfirm
+      .top__widgets
+        .widget.widget-icon-box
+          .icon-box
+            = fa_icon 'clock-o'
+            .icon-box__text
+              h4.icon-box__title Mon - Sat: 7:00 - 17:00
+        .widget.widget-icon-box
+          .icon-box
+            = fa_icon 'envelope-o'
+            .icon-box__text
+              h4.icon-box__title info@legalpress.com
+        .widget.widget-icon-box
+          .icon-box
+            = fa_icon 'home'
+            .icon-box__text
+              h4.icon-box__title 227 Marion Street, Columbia
+        .widget.widget-social-icons
+          = link_to '#', class: 'social-icons__link', target: '_blank' do
+            = fa_icon 'facebook-square'
+          = link_to '#', class: 'social-icons__link', target: '_blank' do
+            = fa_icon 'twitter-square'
+          = link_to '#', class: 'social-icons__link', target: '_blank' do
+            = fa_icon 'youtube-square'
