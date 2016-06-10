@@ -63,4 +63,38 @@
       }
     }
   }
+
+  .header {
+    margin-top: 25px;
+
+    .phones {
+      padding: 25px 0;
+
+      .widget {
+        .fa {
+          float: left;
+          font-size: 40px;
+          margin-right: 5px;
+          color: #ddd;
+          background-color: transparent;
+        }
+
+        h4 {
+          color: #777777;
+          margin: 0;
+          font-size: 15px;
+          font-weight: 500;
+          padding-top: 5px;
+        }
+
+        span {
+          color: #989898;
+        }
+
+        &.hotline {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    }
+  }
 }
