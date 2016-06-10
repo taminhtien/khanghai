@@ -1,57 +1,15 @@
 .shared-header-container
-  .top
+  .top-bar
     .container
-      .top__tagline Khang Hai Lawfirm
-      .top__widgets
-        .widget.widget-icon-box
-          .icon-box
-            = fa_icon 'clock-o'
-            .icon-box__text
-              h4.icon-box__title Mon - Sat: 7:00 - 17:00
-        .widget.widget-icon-box
-          .icon-box
-            = fa_icon 'envelope-o'
-            .icon-box__text
-              h4.icon-box__title info@legalpress.com
-        .widget.widget-icon-box
-          .icon-box
-            = fa_icon 'home'
-            .icon-box__text
-              h4.icon-box__title 227 Marion Street, Columbia
-        .widget.widget-social-icons
-          = link_to '#', class: 'social-icons__link', target: '_blank' do
+      .tagline Khang Hai Lawfirm
+      .widgets
+        .widget.working-hours Mon - Sat: 7:00 - 17:00
+        .widget.email lskhanghai@gmail.com
+        .widget.address 1/4D Bà Triệu, ấp Đình, xã Tân Xuân, huyện Hóc Môn, TP. HCM
+        .widget.social-links
+          = link_to '#', class: 'social-icon', target: '_blank' do
             = fa_icon 'facebook-square'
-          = link_to '#', class: 'social-icons__link', target: '_blank' do
+          = link_to '#', class: 'social-icon', target: '_blank' do
             = fa_icon 'twitter-square'
-          = link_to '#', class: 'social-icons__link', target: '_blank' do
+          = link_to '#', class: 'social-icon', target: '_blank' do
             = fa_icon 'youtube-square'
-  .container
-    .header
-      .header__left-widgets
-        .widget.widget-icon-box
-          .icon-box
-            = fa_icon 'phone-square'
-            .icon-box__text
-              h4.icon-box__title 01675166477
-              span.icon-box__subtitle Hoc Mon's Office
-        .widget.widget-icon-box
-          .icon-box
-            = fa_icon 'headphones'
-            .icon-box__text
-              h4.icon-box__title 954-462-1006
-              span.icon-box__subtitle York's Office
-      
-      .header__logo
-        = link_to '#' do
-          img src="https://demo.proteusthemes.com/legalpress/wp-content/uploads/sites/26/2015/06/logo.png" class="img-responsive" width="270" height="105"
-        button.navbar-toggle.collapsed aria-expanded="false" data-target="#legalpress-navbar-collapse" data-toggle="collapse" type="button" 
-          span.navbar-toggle__text MENU
-          span.navbar-toggle__icon-bar
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-      
-      .header__right-widgets
-        .widget.widget_text
-          .textwidget
-            = link_to 'GET A FREE CONSULTATION', '#', class: 'btn btn-primary'
