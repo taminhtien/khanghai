@@ -1,48 +1,63 @@
 .shared-header-container {
   .top-bar {
-    color: #999999;
     background-color: #f7f7f7;
     border-bottom: 1px solid #efefef;
-    font-weight: 300;
-    line-height: 50px;
+    color: #999999;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 14px 0;
 
     .tagline {
       float: left;
     }
+
     .widgets {
       float: right;
 
       .widget {
-        float: left;
-        padding-right: 20px;
         padding-left: 20px;
+        padding-right: 20px;
         border-right: 1px solid #e0e0e0;
+        float: left;
 
         &.working-hours, &.email, &.address {
-          &:before {
-            font-family: FontAwesome;
-            font-size: 21px;
-            -webkit-font-smoothing: antialiased;
-            vertical-align: middle;
+          h4 {
+            &:before {
+              font-family: FontAwesome;
+              font-size: 21px;
+              vertical-align: middle;
+              -webkit-font-smoothing: antialiased;
+            }
+
+            font-size: 13px;
+            margin: 0;
+            font-weight: 400;
+            display: inline-block;
           }
         }
 
         &.working-hours {
           padding-left: 0;
 
-          &:before {
-            content: "\f017";
+          h4 {
+            &:before {
+              content: "\f017";
+            }
           }
         }
         &.email {
-          &:before {
-            content: "\f003";
+          h4 {
+            &:before {
+              content: "\f003";
+            }
           }
         }
 
         &.address {
-          &:before {
-            content: "\f015";
+          h4 {
+            &:before {
+              content: "\f015";
+            }
           }
         }
 
@@ -50,9 +65,12 @@
           padding-right: 0;
           border-right: none;
 
-          .social-icon {
-            padding-right: 5px;
+          .fa {
             font-size: 21px;
+            vertical-align: middle;
+            margin-right: 5px;
+          }
+          .social-icon {
             color: #999999;
 
             &:hover {
@@ -72,19 +90,19 @@
 
       .widget {
         .fa {
-          float: left;
           font-size: 40px;
-          margin-right: 5px;
-          color: #ddd;
           background-color: transparent;
+          color: #ddd;
+          margin-right: 5px;
+          float: left;
         }
 
         h4 {
-          color: #777777;
-          margin: 0;
           font-size: 15px;
           font-weight: 500;
+          color: #777777;
           padding-top: 5px;
+          margin: 0;
         }
 
         span {
@@ -107,33 +125,33 @@
       margin-top: 25px;
 
       .free-consultation {
-        float: right;
         font-weight: 500;
-        color: #fff;
         background: #ccb68d linear-gradient(to bottom,#ccb68d,#c9b38a);
-        border-color: #ccb68d;
-        font-size: 13px;
+        color: #fff;
         padding: 18px 25px;
         border-width: 2px;
+        border-color: #ccb68d;
         border-radius: 2px;
+        float: right;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
       }
     }
 
     .navigation {
       .navbar {
-        border: 5px solid #45414d;
-        box-shadow: 0 0 0 1px rgba(250, 250, 250, 0.2) inset;
         background-color: #45414d;
+        box-shadow: 0 0 0 1px rgba(250, 250, 250, 0.2) inset;
         margin-top: 25px;
+        border: 5px solid #45414d;
 
         .navbar-nav {
           display: inline-block;
           float: none;
+
           li > a {
             font-family: "Alegreya", Georgia, "Times New Roman", Times, serif;
-            padding: 30.5px 30px;
             font-size: 19px;
+            padding: 30.5px 30px;
           }
         }
 
@@ -141,15 +159,15 @@
           text-align: center;
 
           .dropdown-menu {
-            margin-top: 11px;
             padding: 0;
-            
+            margin-top: 11px;
+
             li > a {
-              padding: 12px 38px 12px 18px;
-              color: #fff;
               font-size: 14px;
-              border-color: #bfa980;
               background-color: #ccb68d;
+              color: #fff;
+              padding: 12px 38px 12px 18px;
+              border-color: #bfa980;
               border-bottom: 1px solid #c3a878;
               min-width: 150px;
               white-space: nowrap;
