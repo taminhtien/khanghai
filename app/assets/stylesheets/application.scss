@@ -1,7 +1,10 @@
-@import "bootstrap-sass";
-@import "bootstrap-material-design";
-@import "font-awesome";
+@import 'bootstrap-sass';
+@import 'bootstrap-material-design';
+@import 'font-awesome';
+@import 'slick';
+@import 'slick-theme';
 
-@import "variables";
-@import "theme";
-@import "shared/_header";
+@import 'variables';
+@import 'theme';
+@import 'shared/header';
+@import 'home/slider';

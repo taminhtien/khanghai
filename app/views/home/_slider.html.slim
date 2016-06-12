@@ -1,0 +1,60 @@
+.home-slider-container
+  .slider.slick-slider
+    .item
+      = image_tag 'sliders/pic1.jpg'
+      .container
+        .content
+          .headline Law firm with tradition
+          .title
+            h1 We practice law since 18th century.
+          .description
+            p
+              | It follow from this that benefits. Among the numerous fault of those who pass their there is
+              br
+              | Among the neither know how to bestow
+            p
+              = link_to 'GET IN TOUCH', '#', class: 'btn btn-raised btn-primary'
+              = link_to 'GET MORE', '#', class: 'btn btn-raised btn-default'
+
+    .item
+      = image_tag 'sliders/pic2.jpg'
+      .container
+        .content
+          .headline Law firm with tradition
+          .title
+            h1 We practice law since 18th century.
+          .description
+            p
+              | It follow from this that benefits. Among the numerous fault of those who pass their there is
+              br
+              | Among the neither know how to bestow
+            p
+              = link_to 'GET IN TOUCH', '#', class: 'btn btn-raised btn-primary'
+              = link_to 'GET MORE', '#', class: 'btn btn-raised btn-default'
+
+    .item
+      = image_tag 'sliders/pic3.jpg'
+      .container
+        .content
+          .headline Law firm with tradition
+          .title
+            h1 We practice law since 18th century.
+          .description
+            p
+              | It follow from this that benefits. Among the numerous fault of those who pass their there is
+              br
+              | Among the neither know how to bestow
+            p
+              = link_to 'GET IN TOUCH', '#', class: 'btn btn-raised btn-primary'
+              = link_to 'GET MORE', '#', class: 'btn btn-raised btn-default'
+
+coffee:
+  $('.slider').slick
+    dots: true
+    infinite: true
+    slidesToShow: 1
+    slidesToScroll: 1
+    speed: 500
+    fade: true
+    autoplay: true
+    lazyLoad: 'progressive'

@@ -15,7 +15,8 @@ gem 'slim-rails'
 gem 'simple_form'
 gem 'rails-assets-bootstrap-material-design', source: 'https://rails-assets.org'
 gem 'friendly_id'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+gem 'jquery-slick-rails'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -33,4 +34,3 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-

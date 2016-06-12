@@ -6,3 +6,11 @@ body {
   color: #999;
   background-color: #fff;
 }
+
+.btn.btn-raised:not(.btn-link):hover.btn-primary {
+  background-color: $darker-tan;
+}
+
+.btn.btn-raised.btn-primary {
+  background-color: $pavlova;
+}
