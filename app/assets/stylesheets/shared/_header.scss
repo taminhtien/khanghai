@@ -115,6 +115,10 @@
     }
 
     .navigation {
+      margin-bottom: -60px;
+      position: relative;
+      z-index: 1000;
+
       .navbar {
         background-color: $grape;
         border: 5px solid $grape;

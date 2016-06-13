@@ -7,10 +7,51 @@ body {
   background-color: #fff;
 }
 
-.btn.btn-raised:not(.btn-link):hover.btn-primary {
-  background-color: $darker-tan;
+
+.btn {
+  border: 1px solid transparent;
+  font-size: 13px;
+  padding: 18px 25px;
+  border-width: 2px;
+  border-radius: 2px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  transition: all 100ms ease-out;
 }
 
 .btn.btn-raised.btn-primary {
   background-color: $pavlova;
+}
+
+.btn.btn-raised:not(.btn-link):hover.btn-primary {
+  background-color: $darker-tan;
+  border-color: $pavlova;
+}
+
+.btn.btn-raised:not(.btn-link):active.btn-primary {
+  background-color: $darker-tan;
+}
+
+.btn.btn-raised:not(.btn-link):focus.btn-primary {
+  background-color: $pavlova;
+  border-color: $pavlova;
+}
+
+.btn.btn-raised.btn-default {
+  background-color: transparent;
+  border-color: rgba(250, 250, 250, 0.33) !important;
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn.btn-raised:not(.btn-link):hover.btn-default {
+  background-color: transparent;
+  border-color: rgba(250, 250, 250, 0.5) !important;
+}
+
+.btn-group-raised .btn:not(.btn-link).active.btn-default {
+  background-color: transparent;
+}
+
+.btn.btn-raised:not(.btn-link):focus.btn-default {
+  background-color: transparent;
 }
