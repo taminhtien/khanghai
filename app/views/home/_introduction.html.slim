@@ -1,0 +1,34 @@
+.home-introduction-container
+  .container
+    .row
+      .col-md-4
+        .company-introduction
+          h3.title We are London based law firm focused on excellence.
+          p.subtitle Headed by one of the most distinguished and experienced lawyers in the country, George Hilton, our firm have a sound base in the law fraternity, and we aim to put our resources to effective use for the success of our clients. Backed by hundreds of successful cases in different fields of law, and having being the preferred law firm for many Fortune 500 companies, you can rest assured that your case is in safe hands with us.
+          p
+            = link_to '#', class: 'read-more' do
+              = fa_icon "long-arrow-right", text: 'Read more', right: true
+
+      .col-md-8
+        .row
+          .col-md-4
+            .family-law
+              .picture
+                = image_tag 'family-law.jpg', class: 'img-responsive'
+              .content
+                h5.title = link_to 'Family Law', '#'
+                p Family law deals with the branch of law pertaining to all matters that are related to family unit or other relations such as partnership, marriage, divorce and any other family matters.
+          .col-md-4
+            .corporate-law
+              .picture
+                = image_tag 'corporate-law.jpg', class: 'img-responsive'
+              .content
+                h5.title = link_to 'Corporate Law', '#'
+                p Today, many people are looking to start their own business. For this, they need to register their business or they might be accused of doing business illegally in the country. This is just one part of the business law.
+          .col-md-4
+            .about-us
+              .picture
+                = image_tag 'about-us.jpg', class: 'img-responsive'
+              .content
+                h5.title = link_to 'About Us', '#'
+                p Our Vision Founded in 1979, our firm has been providing effective, affordable and often untraditional legal solution to our hundreds and thousands of clients over the years.

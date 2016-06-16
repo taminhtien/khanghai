@@ -1,0 +1,48 @@
+.home-introduction-container {
+  margin-bottom: 33px;
+  
+  .company-introduction {
+    .title {
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      margin-top: 0;
+    }
+
+    .read-more {
+      color: $tan;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $darkder-putty
+      }
+    }
+  }
+
+  .family-law,
+  .corporate-law,
+  .about-us {
+    .picture {
+      height: 130px;
+      overflow: hidden;
+    }
+
+    .content {
+      .title {
+        font-size: 24px;
+        margin-bottom: 12px;
+        margin-top: 21px;
+      }
+
+      a {
+        color: $brown;
+
+        &:hover {
+          color: $darkder-putty;
+        }
+      }
+    }
+  }
+}

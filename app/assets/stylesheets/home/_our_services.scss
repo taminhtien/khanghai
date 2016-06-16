@@ -1,0 +1,49 @@
+.home-our-services-container {
+  .service {
+    margin-bottom: 40px;
+  }
+
+  .icon-box {
+    background: linear-gradient(to right, $lighter-white 0%, $white 10%);
+    border: 1px solid $transparent-black-8;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+
+    .fa {
+      background-color: $tan;
+      color: $white;
+      float: left;
+      font-size: 20px;
+      height: 40px;
+      margin-right: 10px;
+      margin-top: 15px;
+      padding: 10px;
+      position: relative;
+      transition: all 100ms ease-out;
+      width: 40px;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: 18px;
+      margin: 2px 0 6px;
+      transition: all 100ms ease-out;
+    }
+
+    .content {
+      margin-left: 60px;
+    }
+
+    &:after {
+      background-color: $transparent-black-8;
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 40px;
+      z-index: 0;
+    }
+  }
+}
