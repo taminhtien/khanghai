@@ -1,25 +1,5 @@
 .home-introduction-container {
   margin-bottom: 33px;
-  
-  .company-introduction {
-    .title {
-      font-size: 36px;
-      line-height: 1.2;
-      margin-bottom: 25px;
-      margin-top: 0;
-    }
-
-    .read-more {
-      color: $tan;
-      font-weight: bold;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      &:hover {
-        color: $darkder-putty
-      }
-    }
-  }
 
   .family-law,
   .corporate-law,

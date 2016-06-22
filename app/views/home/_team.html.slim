@@ -2,9 +2,60 @@
   .container
     .row
       .col-md-3
-        .meet-the-team
+        .widget
           h3.title Meet the team
           p.subtitle Headed by one of the most distinguished and experienced lawyers in the country, George Hilton, our firm have a sound base in the law fraternity, and we aim to put our resources to effective use for the success of our clients. Backed by hundreds of successful cases in different fields of law, and having being the preferred law firm for many Fortune 500 companies, you can rest assured that your case is in safe hands with us.
+          p
+            = link_to '#', class: 'read-more' do
+              = fa_icon "long-arrow-right", text: 'Read more', right: true
+
       .col-md-3
+        .person-profile
+          = image_tag 'person.jpg', class: 'person-profile__image'
+          .person-profile__container
+            .person-profile__content
+              span.person-profile__tag CEO
+              h3.person-profile__name George Hilton
+              p.person-profile__description I'm a London based lawyer and I was born and raised in Manchester. I completed my Masters in Law. I'm the CEO of this firm.
+            .person-profile__social-icons
+              span Meet me on
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'facebook-square'
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'twitter-square'
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'linkedin-square'
+
       .col-md-3
+        .person-profile
+          = image_tag 'person.jpg', class: 'person-profile__image'
+          .person-profile__container
+            .person-profile__content
+              span.person-profile__tag CEO
+              h3.person-profile__name George Hilton
+              p.person-profile__description I'm a London based lawyer and I was born and raised in Manchester. I completed my Masters in Law. I'm the CEO of this firm.
+            .person-profile__social-icons
+              span Meet me on
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'facebook-square'
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'twitter-square'
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'linkedin-square'
+
       .col-md-3
+        .person-profile
+          = image_tag 'person.jpg', class: 'person-profile__image'
+          .person-profile__container
+            .person-profile__content
+              span.person-profile__tag CEO
+              h3.person-profile__name George Hilton
+              p.person-profile__description I'm a London based lawyer and I was born and raised in Manchester. I completed my Masters in Law. I'm the CEO of this firm.
+            .person-profile__social-icons
+              span Meet me on
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'facebook-square'
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'twitter-square'
+              = link_to '#', class: 'person-profile__social_icon' do
+                = fa_icon 'linkedin-square'

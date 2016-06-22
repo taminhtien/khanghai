@@ -1,0 +1,41 @@
+.home-our-pathway-container {
+  background-image: url(image_path('our-pathway.png'));
+  background-size: cover;
+  margin-bottom: 64px;
+  padding: 60px 130px;
+
+  h3 {
+    font-size: 46px;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+
+    &.quote {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    span {
+      color: $tan;
+    }
+  }
+
+  .hr-quote {
+    position: relative;
+
+    &:after {
+      color: #ccb68d;
+      content: '\f02e';
+      font-family: FontAwesome;
+      font-size: 18px;
+      height: 10px;
+      position: absolute;
+      right: calc(50% - 5px);
+      top: calc(50% - 13px);
+      width: 10px;
+    }
+  }
+}
