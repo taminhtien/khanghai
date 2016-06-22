@@ -27,7 +27,9 @@
       &.email,
       &.address {
         h4 {
+          color: $nobel;
           display: inline-block;
+          font-family: 'Roboto', Helvetica, Arial, sans-serif;
           font-size: 13px;
           font-weight: 400;
           margin: 0;
@@ -77,6 +79,7 @@
 
       h4 {
         color: $grey;
+        font-family: 'Roboto', Helvetica, Arial, sans-serif;
         font-size: 15px;
         font-weight: 500;
         margin: 0;

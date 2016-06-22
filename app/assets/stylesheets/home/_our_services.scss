@@ -1,4 +1,6 @@
 .home-our-services-container {
+  margin-bottom: 40px;
+
   .service {
     margin-bottom: 40px;
   }
@@ -44,6 +46,10 @@
       top: 0;
       left: 40px;
       z-index: 0;
+    }
+
+    &:hover {
+      border-color: $tan;
     }
   }
 }
