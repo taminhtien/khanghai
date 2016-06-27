@@ -55,15 +55,22 @@ body {
   background-color: transparent;
 }
 
+h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   color: $brown;
   font-family: 'Alegreya', Georgia, 'Times New Roman', Times, serif;
 }
 
 p {
   margin: 0 0 10.5px;
+}
+
+a {
+  color: $tan;
+  text-decoration: none;
 }
 
 .widget {
@@ -81,16 +88,19 @@ p {
     text-transform: uppercase;
 
     &:hover {
-      color: $darkder-putty
+      color: $darkder-putty;
     }
   }
 }
 
 .widget-title--big {
+  margin-bottom: 50px;
+
   .widget-title {
     font-size: 46px;
     line-height: 1.2;
-    margin-bottom: 25px;
+    margin-bottom: 0;
+    margin-top: 0;
     position: relative;
   }
 

@@ -1,0 +1,38 @@
+.home-new-container {
+  .latest-new {
+    position: relative;
+  }
+
+  .latest-new__date {
+    background-color: $tan;
+    color: $white;
+    font-weight: bold;
+    padding: 2px 10px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    text-align: center;
+    text-shadow: 1px 0 1px $transparent-black-10;
+  }
+
+  .latest-new__image {
+    display: block;
+
+    img {
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .latest-new__content {
+    padding: 20px 0 18px;
+  }
+
+  .latest-new__title {
+    font-size: 18px;
+    margin-bottom: 14px;
+    margin-top: 0;
+    transition: all 100ms ease-out;
+  }
+}

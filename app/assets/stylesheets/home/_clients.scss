@@ -1,0 +1,32 @@
+.home-clients-container {
+  .widget-title--big {
+    margin-bottom: 40px;
+  }
+
+  .widget-title__line {
+    left: 377px;
+  }
+
+  .clients {
+    margin-bottom: 80px;
+  }
+
+  .client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    border: 1px solid $transparent-black-10;
+    height: auto;
+    max-width: 100%;
+    opacity: .6;
+    transition: all 100ms ease-out;
+
+    &:hover {
+      border: 1px solid $tan;
+      opacity: 1;
+    }
+  }
+}

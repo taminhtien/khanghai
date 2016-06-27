@@ -11,6 +11,45 @@
     width: 100%;
   }
 
+  .slick-prev,
+  .slick-next {
+    background: $grape;
+    border: 5px solid $grape;
+    box-shadow: 0 0 0 1px $transparent-white-20 inset;
+    position: absolute;
+    top: 50%;
+    font-size: 0;
+    width: 60px;
+    height: 60px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    &:hover {
+      box-shadow: 0 0 0 1px $transparent-white-60 inset;
+      color: $white;
+    }
+  }
+
+  .slick-prev {
+    left: 40px;
+    z-index: 1;
+
+    &:before {
+      content: "\f177";
+      font-family: FontAwesome;
+    }
+  }
+
+  .slick-next {
+    right: 40px;
+
+    &:before {
+      content: "\f178";
+      font-family: FontAwesome;
+    }
+  }
+
   .content {
     position: absolute;
     top: 100px;

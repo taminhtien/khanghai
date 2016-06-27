@@ -1,0 +1,23 @@
+.home-statistics-container {
+  background: url(image_path('pattern-background.png')) repeat;
+  padding: 40px 0;
+
+  .number-counter {
+    background-color: $white;
+    box-shadow: 0 1px 8px $transparent-black-10;
+    padding: 30px;
+  }
+
+  .number-counter__item {
+    text-align: center;
+
+    h2 {
+      margin-bottom: 5px;
+      margin-top: 8px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
