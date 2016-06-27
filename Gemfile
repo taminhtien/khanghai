@@ -17,6 +17,8 @@ gem 'rails-assets-bootstrap-material-design', source: 'https://rails-assets.org'
 gem 'friendly_id'
 gem 'font-awesome-rails'
 gem 'jquery-slick-rails'
+gem 'figaro'
+gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -33,4 +35,9 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
