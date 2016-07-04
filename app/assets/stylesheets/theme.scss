@@ -18,21 +18,32 @@ body {
 }
 
 .btn.btn-raised.btn-primary {
-  background-color: $pavlova;
+  background: $tan linear-gradient(to bottom, $tan, $darker-tan);
+  border-color: $tan;
 }
 
 .btn.btn-raised:not(.btn-link):hover.btn-primary {
-  background-color: $darker-tan;
+  background: $pavlova;
   border-color: $pavlova;
 }
 
 .btn.btn-raised:not(.btn-link):active.btn-primary {
-  background-color: $darker-tan;
+  background: $lightest-putty;
+  border-color: $lighter-yellow;
+  box-shadow: inset 0 3px 5px $transparent-black-1;
+  outline: 0;
 }
 
 .btn.btn-raised:not(.btn-link):focus.btn-primary {
-  background-color: $pavlova;
-  border-color: $pavlova;
+  background: $lightest-putty;
+  border-color: $more-darker-brown;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+
+  &:hover {
+    background: $pavlova;
+    border-color: $pavlova;
+  }
 }
 
 .btn.btn-raised.btn-default {
