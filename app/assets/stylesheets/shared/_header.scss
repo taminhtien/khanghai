@@ -331,6 +331,24 @@
             top: 50%;
             right: -5px;
           }
+
+          &:after {
+            &:before {
+              content: '';
+            }
+          }
+
+          &.active {
+            &:after {
+              background-color: $tan;
+              content: '';
+              position: absolute;
+              width: calc(100% - 60px);
+              height: 5px;
+              left: 30px;
+              bottom: 0;
+            }
+          }
         }
 
         &.has-children {

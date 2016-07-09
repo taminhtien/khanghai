@@ -1,6 +1,7 @@
 lock '3.5.0'
 
 set :application, 'khanghai'
+set :assets_roles, [:app]
 set :repo_url, 'git@github.com:taminhtien/khanghai.git'
 set :branch, :master
 set :deploy_to, '/home/deploy/khanghai'

@@ -57,7 +57,7 @@
       .header__navigation
         nav.collapse.navbar-collapse aria-label='Main Menu' id='legalpress-navbar-collapse'
           ul#menu-main-menu class='main-navigation js-main-nav' role='menubar'
-            li = link_to "Home", root_url
+            li = active_link_to "Home", root_url, active: :exact
             li.has-children
               = link_to 'Our Services', '#'
               ul.sub-menu
@@ -67,6 +67,6 @@
                 li = link_to 'Personal Injury Law', '#'
                 li = link_to 'Bankruptcy Law', '#'
                 li = link_to 'Family Law', '#'
-            li = link_to "About Us", '#'
-            li = link_to "News", '#'
-            li = link_to "Contact us", '#'
+            li = active_link_to "About Us", '#', active: :exact
+            li = active_link_to "News", '#', active: :exact
+            li = active_link_to "Contact us", '#', active: :exact

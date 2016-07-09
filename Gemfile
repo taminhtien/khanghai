@@ -19,6 +19,7 @@ gem 'font-awesome-rails'
 gem 'jquery-slick-rails'
 gem 'figaro'
 gem 'puma'
+gem 'active_link_to'
 
 group :development, :test do
   gem 'rspec-rails'
