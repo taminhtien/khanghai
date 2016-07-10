@@ -4,14 +4,10 @@
   .family-law,
   .corporate-law,
   .about-us {
-    .picture {
-      height: 130px;
-      overflow: hidden;
-    }
-
     .content {
       .title {
         font-size: 24px;
+        font-weight: 500;
         margin-bottom: 12px;
         margin-top: 21px;
       }
@@ -23,6 +19,14 @@
           color: $darkder-putty;
         }
       }
+    }
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 0;
+
+    .col-md-4 {
+      margin-bottom: 40px;
     }
   }
 }

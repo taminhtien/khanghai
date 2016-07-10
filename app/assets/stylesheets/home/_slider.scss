@@ -1,7 +1,18 @@
 .home-slider-container {
+  background-color: $grape;
+  margin-bottom: 30px;
+  padding: 0 0 20px;
+  position: relative;
+
   .slider {
-    background-color: transparent;
-    text-align: center;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .slick-slider {
+    margin-bottom: 0;
   }
 
   img {
@@ -17,7 +28,7 @@
     border: 5px solid $grape;
     box-shadow: 0 0 0 1px $transparent-white-20 inset;
     position: absolute;
-    top: 50%;
+    top: 20px;
     font-size: 0;
     width: 60px;
     height: 60px;
@@ -32,44 +43,42 @@
   }
 
   .slick-prev {
-    left: 40px;
+    left: 20px;
     z-index: 1;
 
     &:before {
       content: "\f177";
       font-family: FontAwesome;
+      font-size: 14px;
     }
   }
 
   .slick-next {
-    right: 40px;
+    right: 20px;
 
     &:before {
       content: "\f178";
       font-family: FontAwesome;
+      font-size: 14px;
     }
   }
 
-  .content {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
+  .headline {
+    color: $tan;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 11px;
+    margin-top: 31px;
+    text-transform: uppercase;
+  }
 
-    .headline {
-      color: $tan;
-      font-size: 16px;
-      font-weight: bold;
-      letter-spacing: 5px;
-      margin-bottom: 11px;
-      margin-top: 31px;
-      text-transform: uppercase;
-    }
+  .content {
+    padding: 0;
 
     .title {
       h1 {
         color: $white;
-        font-family: 'Alegreya', Georgia, 'Times New Roman', Times, serif;
         font-size: 46px;
         font-weight: normal;
         margin-bottom: 15px;
@@ -82,12 +91,70 @@
         color: $white;
         font-size: 16px;
         font-weight: normal;
-        margin: 0 0 10.5px;
       }
+    }
+  }
 
-      a {
-        padding: 18px 25px;
-      }
+  @media (min-width: 480px) {
+    .slick-prev,
+    .slick-next {
+      top: 60px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .slick-prev,
+    .slick-next {
+      top: 100px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    background-color: transparent;
+    margin-bottom: 45px;
+    padding: 0;
+    text-align: center;
+
+    .content {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      right: 0;
+    }
+
+    .headline {
+      font-size: 14px;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .slick-prev,
+    .slick-next {
+      top: 48%;
+    }
+
+    .slick-prev {
+      left: 40px;
+    }
+
+    .slick-next {
+      right: 40px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      width: 1180px;
+    }
+
+    .content {
+      top: 100px;
+    }
+
+    .headline {
+      font-size: 14px;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
   }
 }

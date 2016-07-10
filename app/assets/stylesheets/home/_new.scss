@@ -31,8 +31,15 @@
 
   .latest-new__title {
     font-size: 18px;
+    font-weight: 500;
     margin-bottom: 14px;
     margin-top: 0;
     transition: all 100ms ease-out;
+  }
+
+  @media (max-width: 991px) {
+    .col-md-4 {
+      margin-bottom: 40px;
+    }
   }
 }

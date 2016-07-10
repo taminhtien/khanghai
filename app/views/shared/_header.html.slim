@@ -1,7 +1,7 @@
 .shared-header-container
   .top
     .container
-      .top__tagline Khang Hai Lawfirm
+      .top__tagline Công ty Luật Khang Hải
       .top__widgets
         .widget.working-hours
           = fa_icon 'clock-o'
@@ -13,10 +13,10 @@
 
         .widget.address
           = fa_icon 'home'
-          h4 1/4D Bà Triệu, ấp Đình, xã Tân Xuân, huyện Hóc Môn, TP. HCM
+          h4 1/4D Bà Triệu, Hóc Môn, TP. HCM
 
         .widget.social-links
-          = link_to '#', class: 'social-icon', target: '_blank' do
+          = link_to 'https://goo.gl/FA4lUp', class: 'social-icon', target: '_blank' do
             = fa_icon 'facebook-square'
           = link_to '#', class: 'social-icon', target: '_blank' do
             = fa_icon 'twitter-square'
@@ -31,14 +31,14 @@
             = fa_icon 'phone-square'
             .icon-box__text
               h4.icon-box__title 0908362606
-              span.icon-box__subtitle Hotline
+              span.icon-box__subtitle Đường dây nóng
 
         .widget.widget-icon-box
           .icon-box
             = fa_icon 'headphones'
             .icon-box__text
               h4.icon-box__title 0837100638
-              span.icon-box__subtitle HCM's Office
+              span.icon-box__subtitle Văn phòng tại TP. HCM
 
       .header__logo
         = link_to (image_tag 'logo.jpg'), root_url
@@ -52,21 +52,21 @@
       .header__right-widgets
         .widget.widget_text
           .textwidget
-            = link_to 'GET A FREE CONSULTATION', '#', class: 'btn btn-raised btn-primary'
+            = link_to 'TƯ VẤN MIỄN PHÍ', '#', class: 'btn btn-raised btn-primary'
 
       .header__navigation
         nav.collapse.navbar-collapse aria-label='Main Menu' id='legalpress-navbar-collapse'
           ul#menu-main-menu class='main-navigation js-main-nav' role='menubar'
-            li = active_link_to "Home", root_url, active: :exact
+            li = active_link_to "Trang chủ", root_url, active: :exact
             li.has-children
-              = link_to 'Our Services', '#'
+              = link_to 'Dịch vụ', '#'
               ul.sub-menu
-                li = link_to 'Criminal Law', '#'
-                li = link_to 'Civil Rights Law', '#'
-                li = link_to 'Corporate Law', '#'
-                li = link_to 'Personal Injury Law', '#'
-                li = link_to 'Bankruptcy Law', '#'
-                li = link_to 'Family Law', '#'
-            li = active_link_to "About Us", '#', active: :exact
-            li = active_link_to "News", '#', active: :exact
-            li = active_link_to "Contact us", '#', active: :exact
+                li = link_to 'Luật hình sự', '#'
+                li = link_to 'Luật dân quyền', '#'
+                li = link_to 'Luật doanh nghiệp', '#'
+                li = link_to 'Luật Thương tích cá nhân', '#'
+                li = link_to 'Luật phá sản', '#'
+                li = link_to 'Luật gia đình', '#'
+            li = active_link_to "Giới thiệu", '#', active: :exact
+            li = active_link_to "Tin tức", '#', active: :exact
+            li = active_link_to "Liên hệ", '#', active: :exact

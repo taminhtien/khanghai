@@ -3,23 +3,27 @@
   background-color: $grape;
 
   .text {
-    float: left;
-    padding: 30px 0;
-    text-align: left;
+    padding: 30px 0 0;
+    text-align: center;
 
     .title {
       color: $white;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Roboto Slab', serif;
       font-size: 24px;
     }
 
     .subtitle {
       color: $light-grey;
     }
+
+    @media (min-width: 992px) {
+      float: left;
+      padding: 30px 0;
+      text-align: left;
+    }
   }
 
   .buttons {
-    float: right;
     padding: 30px 0;
     text-align: center;
 
@@ -30,6 +34,10 @@
       &.btn-apply-now {
         margin-right: 15px;
       }
+    }
+
+    @media (min-width: 992px) {
+      float: right;
     }
   }
 }

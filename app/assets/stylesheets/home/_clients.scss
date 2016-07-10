@@ -4,11 +4,11 @@
   }
 
   .widget-title__line {
-    left: 377px;
+    left: 250px;
   }
 
   .clients {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
   }
 
   .client {
@@ -20,6 +20,7 @@
   img {
     border: 1px solid $transparent-black-10;
     height: auto;
+    margin-bottom: 20px;
     max-width: 100%;
     opacity: .6;
     transition: all 100ms ease-out;
@@ -27,6 +28,12 @@
     &:hover {
       border: 1px solid $tan;
       opacity: 1;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .widget-title__line {
+      left: 400px;
     }
   }
 }

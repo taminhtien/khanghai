@@ -2,10 +2,11 @@
   background-image: url(image_path('our-pathway.png'));
   background-size: cover;
   margin-bottom: 64px;
-  padding: 60px 130px;
+  padding: 60px 0;
 
   h3 {
     font-size: 46px;
+    font-weight: 500;
     text-align: center;
   }
 
@@ -13,8 +14,9 @@
     text-align: center;
 
     &.quote {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Roboto Slab', serif;
       font-size: 22px;
+      font-weight: 300;
       text-align: center;
     }
 

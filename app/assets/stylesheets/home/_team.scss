@@ -1,6 +1,6 @@
 .home-team-container {
   padding-bottom: 80px;
-  
+
   .person-profile__image {
     height: auto;
     width: 100%;
@@ -27,6 +27,7 @@
   }
 
   .person-profile__name {
+    font-weight: 500;
     margin-top: 16px;
   }
 
@@ -35,8 +36,14 @@
     padding: 13px 30px 11px;
 
     span {
-      display: inline;
+      display: none;
       padding-right: 13px;
+    }
+
+    @media (min-width: 1200px) {
+      span {
+        display: inline;
+      }
     }
   }
 
@@ -45,5 +52,13 @@
     font-size: 24px;
     margin-left: 2px;
     vertical-align: middle;
+  }
+
+  @media (max-width: 991px) {
+    padding-bottom: 40px;
+
+    .col-md-3 {
+      margin-bottom: 40px;
+    }
   }
 }

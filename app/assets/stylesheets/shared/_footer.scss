@@ -44,8 +44,6 @@
   }
 
   .footer-bottom__left {
-    float: left;
-
     a {
       color: $white;
       font-weight: bold;
@@ -56,7 +54,13 @@
     }
   }
 
-  .footer-bottom__right {
-    float: right;
+  @media (min-width: 992px) {
+    .footer-bottom__left {
+      float: left;
+    }
+
+    .footer-bottom__right {
+      float: right;
+    }
   }
 }
