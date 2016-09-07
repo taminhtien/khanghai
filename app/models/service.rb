@@ -1,4 +1,4 @@
-class OurService < ActiveRecord::Base
+class Service < ActiveRecord::Base
   extend FriendlyId
 
   friendly_id :title,   use: [:slugged, :finders]
