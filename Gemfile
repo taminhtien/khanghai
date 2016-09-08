@@ -20,13 +20,17 @@ gem 'jquery-slick-rails'
 gem 'figaro'
 gem 'puma'
 gem 'active_link_to'
+gem 'seedbank'
+gem 'paperclip'
+gem 'gretel'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'factory_girl_rails'
   gem 'capybara'
-
+  gem 'pry-rails'
+  gem 'pry-byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'awesome_print'

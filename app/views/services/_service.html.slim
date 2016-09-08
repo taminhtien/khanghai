@@ -1,0 +1,8 @@
+.services-service-container
+  .col-md-4
+    .service-box
+      = link_to image_tag(service.picture.url(:thumb)), service
+      .content
+        h5.title
+          = link_to service.title, service
+        p = service.content.truncate(200)

@@ -1,0 +1,39 @@
+doctype html
+html
+  = render 'layouts/head'
+
+  body
+    header
+      = render 'shared/header'
+    
+    .main-title
+      .container
+        h1.main-title__primary = yield(:main_title_primary)
+        h3.main-title__secondary = yield(:main_title_secondary)
+
+    - if breadcrumbs.present?
+      .breadcrumbs
+        .container
+          - breadcrumbs.tap do |links|
+            - if links.any?
+              - links[0..-2].each do |link|
+                = link_to link.text, link.url, class: 'root-item' if link.key == :root
+                = link_to link.text, link.url, class: (link.current? ? 'current' : nil) if link.key != :root
+              span #{links[-1].text}
+
+    #primary.content-area.container
+      .row
+        main#main.site-main.col-xs-12.col-md-9.col-md-push-3
+          = yield
+
+        .col-xs-12.col-md-3.col-md-pull-9
+          .sidebar role='complementary'
+            .widget.widget_nav_menu
+              .menu-services-menu-container
+                ul#menu-services-menu.menu
+                  li = active_link_to 'All Services', services_path, active: :exact
+                  - Service.all.each do |service|
+                    li = active_link_to service.title, service, active: :exact
+
+    footer
+      = render 'shared/footer'

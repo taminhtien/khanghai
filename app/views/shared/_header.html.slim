@@ -59,14 +59,11 @@
           ul#menu-main-menu class='main-navigation js-main-nav' role='menubar'
             li = active_link_to "Trang chủ", root_url, active: :exact
             li.has-children
-              = link_to 'Dịch vụ', '#'
+              = link_to 'Dịch vụ', services_path
               ul.sub-menu
-                li = link_to 'Luật hình sự', '#'
-                li = link_to 'Luật dân quyền', '#'
-                li = link_to 'Luật doanh nghiệp', '#'
-                li = link_to 'Luật Thương tích cá nhân', '#'
-                li = link_to 'Luật phá sản', '#'
-                li = link_to 'Luật gia đình', '#'
+                - Service.all.each do |service|
+                  li = link_to service.title, service
+                
             li = active_link_to "Giới thiệu", '#', active: :exact
             li = active_link_to "Tin tức", '#', active: :exact
             li = active_link_to "Liên hệ", '#', active: :exact

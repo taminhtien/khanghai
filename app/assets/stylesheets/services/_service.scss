@@ -1,0 +1,23 @@
+.services-service-container {
+  .service-box {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-top: 21px;
+    margin-bottom: 12px;
+
+    a {
+      color: $brown;
+
+      &:hover {
+        color: $darkder-putty;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 18px;
+  }
+}
