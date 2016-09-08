@@ -1,4 +1,5 @@
 class Service < ActiveRecord::Base
+  include RailsAdmin::Service
   extend FriendlyId
 
   friendly_id :title,   use: [:slugged, :finders]

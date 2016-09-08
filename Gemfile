@@ -23,6 +23,8 @@ gem 'active_link_to'
 gem 'seedbank'
 gem 'paperclip'
 gem 'gretel'
+gem 'rails_admin'
+gem 'ckeditor'
 
 group :development, :test do
   gem 'rspec-rails'
