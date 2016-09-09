@@ -8,6 +8,10 @@
 @import "theme";
 @import "shared/header";
 @import "shared/footer";
+@import "shared/breadcrumbs";
+@import "shared/main_title";
+@import "shared/employee";
+@import "shared/map";
 @import "home/slider";
 @import "home/introduction";
 @import "home/our_services";
@@ -17,8 +21,10 @@
 @import "home/news";
 @import "home/new";
 @import "home/clients";
-@import "home/map";
 @import "home/statistics";
 @import "home/coming_soon";
-@import "layout/service";
+@import "layout/services";
+@import "layout/pages";
 @import "services/service";
+@import "pages/about_us";
+@import "pages/contact_us";

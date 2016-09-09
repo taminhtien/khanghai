@@ -1,0 +1,54 @@
+.shared-employee-container {
+  .person-profile__image {
+    height: auto;
+    width: 100%;
+  }
+
+  .person-profile__container {
+    box-shadow: 0 1px 8px $transparent-black-10;
+  }
+
+  .person-profile__content {
+    border-top: 2px solid $tan;
+    padding: 15px 30px 14px;
+    position: relative;
+  }
+
+  .person-profile__tag {
+    background-color: #ccb68d;
+    color: $white;
+    font-weight: bold;
+    padding: 2px 10px;
+    position: absolute;
+    text-shadow: 0 1px 1px $transparent-black-10;
+    top: -14px;
+  }
+
+  .person-profile__name {
+    font-weight: 500;
+    margin-top: 16px;
+  }
+
+  .person-profile__social-icons {
+    border-top: 1px solid $darker-gainsboro;
+    padding: 13px 30px 11px;
+
+    span {
+      display: none;
+      padding-right: 13px;
+    }
+
+    @media (min-width: 1200px) {
+      span {
+        display: inline;
+      }
+    }
+  }
+
+  .person-profile__social_icon {
+    color: $nobel;
+    font-size: 24px;
+    margin-left: 2px;
+    vertical-align: middle;
+  }
+}

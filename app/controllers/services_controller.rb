@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-  layout 'service'
+  layout 'services'
   before_action :set_service, only: [:show]
 
   def index

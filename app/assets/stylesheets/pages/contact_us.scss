@@ -1,0 +1,14 @@
+#pages-contact-us-container {
+  margin-bottom: 60px;
+
+  .shared-map-container {
+    margin-top: -30px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: 992px) {
+    .shared-map-container {
+      margin-top: -60px;
+    }
+  }
+}

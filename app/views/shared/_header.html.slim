@@ -64,6 +64,6 @@
                 - Service.all.each do |service|
                   li = link_to service.title, service
                 
-            li = active_link_to "Giới thiệu", '#', active: :exact
+            li = active_link_to "Giới thiệu", about_us_path, active: :exact
             li = active_link_to "Tin tức", '#', active: :exact
-            li = active_link_to "Liên hệ", '#', active: :exact
+            li = active_link_to "Liên hệ", contact_us_path, active: :exact

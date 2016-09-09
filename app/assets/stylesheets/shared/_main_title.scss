@@ -1,0 +1,33 @@
+.shared-main-title-container {
+  .main-title {
+    background-image: url(pattern-background.png);
+    background-color: $white-smoke;
+    padding: 40px 0;
+    margin-bottom: 30px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+
+  .main-title__primary {
+    font-size: 40px;
+    color: #333;
+    margin: 0;
+  }
+
+  .main-title__secondary {
+    font-size: 16px;
+    color: $nobel;
+    margin: 10px 0 7px;
+  }
+
+  @media (min-width: 992px) {
+    .main-title {
+      padding: 121px 0 80px;
+    }
+
+    .main-title__primary {
+      font-size: 60px;
+    }
+  }
+}

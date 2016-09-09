@@ -1,0 +1,11 @@
+.shared-breadcrumbs-container
+  - if breadcrumbs.present?
+    .breadcrumbs
+      .container
+        - breadcrumbs.tap do |links|
+          - if links.any?
+            - links[0..-2].each do |link|
+              = link_to link.text, link.url, class: 'root-item' if link.key == :root
+              = link_to link.text, link.url, class: (link.current? ? 'current' : nil) if link.key != :root
+            span #{links[-1].text}
+            

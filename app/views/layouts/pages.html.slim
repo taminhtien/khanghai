@@ -1,0 +1,15 @@
+doctype html
+html
+  = render 'layouts/head'
+
+  body
+    header
+      = render 'shared/header'
+    
+    = render 'shared/main_title'
+    = render 'shared/breadcrumbs'
+
+    = yield
+
+    footer
+      = render 'shared/footer'

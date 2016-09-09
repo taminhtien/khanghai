@@ -6,6 +6,14 @@ crumb :services do
   link 'Our Services', services_path
 end
 
+crumb :about_us do
+  link 'About us', about_us_path
+end
+
+crumb :contact_us do
+  link 'Contact us', contact_us_path
+end
+
 crumb :service do |service|
   link service.title, service
   parent :services

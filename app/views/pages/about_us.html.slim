@@ -1,0 +1,38 @@
+- provide(:main_title_primary, 'About Us')
+- provide(:main_title_secondary, 'Meet our attorneys')
+- breadcrumb :about_us
+
+#pages-about-us-container
+  #primary.content-area.container
+    .row
+      main#main.site-main.col-xs-12 role='main'
+        .row
+          .vision-and-mission
+            .col-md-6
+              .our-vision
+                h3.widget-title
+                  span.widget-title__inline Our Vision
+                .textwidget
+                  p Founded in 1979, our firm has been providing effective, affordable and often untraditional legal solution to our hundreds and thousands of clients over the years. Our law firm consists of remarkable team of expert trial attorneys in just about every field of law you can name, and it is because of this comprehensive nature of the legal services we provide, our firm has been able to stay ahead of its league for decades.
+
+            .col-md-6
+              .our-mission
+                h3.widget-title
+                  span.widget-title__inline Our Mission
+                .textwidget
+                  p Headed by one of the most distinguished and experienced lawyers in the country, George Hilton, our firm have a sound base in the law fraternity, and we aim to put our resources to effective use for the success of our clients. Backed by hundreds of successful cases in different fields of law, and having being the preferred law firm for many Fortune 500 companies, you can rest assured that your case is in safe hands with.
+
+            .clearfix
+
+        .row
+          .team-members
+            .col-md-4
+              = render 'shared/employee'
+
+            .col-md-4
+              = render 'shared/employee'
+
+            .col-md-4
+              = render 'shared/employee'
+
+            .clearfix
