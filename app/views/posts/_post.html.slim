@@ -1,0 +1,18 @@
+.posts-post-container
+  article.article
+    header
+      = link_to image_tag(post.picture.url(:large)), class: 'img-responsive'
+      .meta
+        .meta-data
+          time datetime="#{post.created_at}" = post.created_at
+          span.meta-data__separator |
+          span.meta-data__author = post.user.name
+          span.meta-data__separator |
+          span.meta-data__categories
+            = link_to post.category.name, post.category
+      h2.title
+        = link_to post.title, post
+    
+    .entry-content
+      p = post.content.truncate(400)
+      p = link_to 'Read more', post, class: 'more-link'

@@ -11,33 +11,28 @@
           .col-xs-12.col-md-3
             h6 Navigation
             ul
-              li = link_to 'Home', '#'
-              li = link_to 'Our Services', '#'
-              li = link_to 'About Us', '#'
+              li = link_to 'Home', root_path
+              li = link_to 'Our Services', services_path
+              li = link_to 'About Us', about_us_path
               li = link_to 'Legal News', '#'
-              li = link_to 'Shop', '#'
-              li = link_to 'Contact Us', '#'
+              li = link_to 'Contact Us', contact_us_path
 
           .col-xs-12.col-md-3
             h6 Practice Areas
             ul
-              li = link_to 'All Services', '#'
-              li = link_to 'Family Law', '#'
-              li = link_to 'Bankruptcy Law', '#'
-              li = link_to 'Corporate Law', '#'
-              li = link_to 'Personal Injury Law', '#'
-              li = link_to 'Civil Rights Law', '#'
-              li = link_to 'Criminal Law', '#'
+              li = link_to 'All Services', services_path
+              - Service.all.each do |service|
+                li = link_to service.title, service
 
           .col-xs-12.col-md-3
             p
-              = link_to '#', class: 'social-icon', target: '_blank' do
+              = link_to 'https://www.facebook.com/khanghailawfirm', class: 'social-icon', target: '_blank' do
                 = fa_icon 'facebook-square'
               | &nbsp;
-              = link_to '#', class: 'social-icon', target: '_blank' do
+              = link_to 'javascript:', class: 'social-icon', target: '_blank' do
                 = fa_icon 'twitter-square'
               | &nbsp;
-              = link_to '#', class: 'social-icon', target: '_blank' do
+              = link_to 'javascript:', class: 'social-icon', target: '_blank' do
                 = fa_icon 'youtube-square'
 
     .footer-bottom

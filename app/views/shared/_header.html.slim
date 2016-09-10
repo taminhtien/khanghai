@@ -16,11 +16,11 @@
           h4 1/4D Bà Triệu, Hóc Môn, TP. HCM
 
         .widget.social-links
-          = link_to 'https://goo.gl/FA4lUp', class: 'social-icon', target: '_blank' do
+          = link_to 'https://www.facebook.com/khanghailawfirm', class: 'social-icon', target: '_blank' do
             = fa_icon 'facebook-square'
-          = link_to '#', class: 'social-icon', target: '_blank' do
+          = link_to 'javascript:', class: 'social-icon', target: '_blank' do
             = fa_icon 'twitter-square'
-          = link_to '#', class: 'social-icon', target: '_blank' do
+          = link_to 'javascript:', class: 'social-icon', target: '_blank' do
             = fa_icon 'youtube-square'
 
   .container
@@ -52,7 +52,7 @@
       .header__right-widgets
         .widget.widget_text
           .textwidget
-            = link_to 'TƯ VẤN MIỄN PHÍ', '#', class: 'btn btn-raised btn-primary'
+            = link_to 'TƯ VẤN MIỄN PHÍ', contact_us_path, class: 'btn btn-raised btn-primary'
 
       .header__navigation
         nav.collapse.navbar-collapse aria-label='Main Menu' id='legalpress-navbar-collapse'
@@ -65,5 +65,5 @@
                   li = link_to service.title, service
                 
             li = active_link_to "Giới thiệu", about_us_path, active: :exact
-            li = active_link_to "Tin tức", '#', active: :exact
+            li = active_link_to "Tin tức", posts_path, active: :exact
             li = active_link_to "Liên hệ", contact_us_path, active: :exact

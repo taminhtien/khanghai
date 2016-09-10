@@ -1,0 +1,51 @@
+doctype html
+html
+  = render 'layouts/head'
+  
+  body
+    #fb-root
+
+    header
+      = render 'shared/header'
+    
+    = render 'shared/main_title'
+    = render 'shared/breadcrumbs'
+    
+    #primary.content-area.container
+      .row
+        main#main.site-main.col-xs-12.col-md-9 role='main'
+          = yield
+        
+        .col-xs-12.col-md-3
+          .sidebar role='complementary'
+            .widget.widget-person-profile
+              = render 'shared/employee'
+            
+            .widget.widget_search
+              = form_tag '/posts', method: :get do
+                label
+                  = search_field_tag :q, 'Search...', class: 'search-field'
+
+                = content_tag :button, type: :submit, class: 'search-submit' do
+                  i.fa.fa-lg.fa-search
+
+
+            .widget.widget_categories
+              h4.sidebar__headings Categories
+              ul
+                - Category.all.each do |category|
+                  li
+                    = link_to category.name, category
+
+            .widget
+              h4.sidebar__headings Facebook
+              .fb-page data-adapt-container-width='true' data-height='100' data-hide-cover='false' data-href='https://www.facebook.com/khanghailawfirm/' data-show-facepile='true' data-small-header='false' data-tabs='timeline' 
+                blockquote.fb-xfbml-parse-ignore cite='https://www.facebook.com/khanghailawfirm/' 
+                  = link_to 'Công Ty Luật Khang Hải', 'https://www.facebook.com/khanghailawfirm/'
+
+
+    
+    = javascript_include_tag 'facebook_page'
+
+    footer
+      = render 'shared/footer'

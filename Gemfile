@@ -25,6 +25,7 @@ gem 'paperclip'
 gem 'gretel'
 gem 'rails_admin'
 gem 'ckeditor'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'
