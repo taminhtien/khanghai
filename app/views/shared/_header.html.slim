@@ -1,19 +1,19 @@
 .shared-header-container
   .top
     .container
-      .top__tagline Công ty Luật Khang Hải
+      .top__tagline = t('home_page.header.company_name')
       .top__widgets
         .widget.working-hours
           = fa_icon 'clock-o'
-          h4 Mon - Sat: 7:00 - 17:00
+          h4 = t('home_page.header.working_hour')
 
         .widget.email
           = fa_icon 'envelope-o'
-          h4 lskhanghai@gmail.com
+          h4 = t('home_page.header.email')
 
         .widget.address
           = fa_icon 'home'
-          h4 1/4D Bà Triệu, Hóc Môn, TP. HCM
+          h4 = t('home_page.header.address')
 
         .widget.social-links
           = link_to 'https://www.facebook.com/khanghailawfirm', class: 'social-icon', target: '_blank' do
@@ -30,15 +30,15 @@
           .icon-box
             = fa_icon 'phone-square'
             .icon-box__text
-              h4.icon-box__title 0908362606
-              span.icon-box__subtitle Đường dây nóng
+              h4.icon-box__title = t('home_page.header.hotline')
+              span.icon-box__subtitle = t('home_page.header.hotline_subtitle')
 
         .widget.widget-icon-box
           .icon-box
             = fa_icon 'headphones'
             .icon-box__text
-              h4.icon-box__title 0837100638
-              span.icon-box__subtitle Văn phòng tại TP. HCM
+              h4.icon-box__title = t('home_page.header.office_phone_number')
+              span.icon-box__subtitle = t('home_page.header.office_phone_number_subtitle')
 
       .header__logo
         = link_to (image_tag 'logo.jpg'), root_url
@@ -52,18 +52,18 @@
       .header__right-widgets
         .widget.widget_text
           .textwidget
-            = link_to 'TƯ VẤN MIỄN PHÍ', contact_us_path, class: 'btn btn-raised btn-primary'
+            = link_to "#{t('home_page.header.free_consultant')}", contact_us_path, class: 'btn btn-raised btn-primary'
 
       .header__navigation
         nav.collapse.navbar-collapse aria-label='Main Menu' id='legalpress-navbar-collapse'
           ul#menu-main-menu class='main-navigation js-main-nav' role='menubar'
-            li = active_link_to "Trang chủ", root_url, active: :exact
+            li = active_link_to "#{t('home_page.header.home')}", root_url, active: :exact
             li.has-children
-              = link_to 'Dịch vụ', services_path
+              = link_to "#{t('home_page.header.service')}", services_path
               ul.sub-menu
                 - Service.all.each do |service|
                   li = link_to service.title, service
                 
-            li = active_link_to "Giới thiệu", about_us_path, active: :exact
-            li = active_link_to "Tin tức", posts_path, active: :exact
-            li = active_link_to "Liên hệ", contact_us_path, active: :exact
+            li = active_link_to "#{t('home_page.header.about_us')}", about_us_path, active: :exact
+            li = active_link_to "#{t('home_page.header.news')}", posts_path, active: :exact
+            li = active_link_to "#{t('home_page.header.contact_us')}", contact_us_path, active: :exact

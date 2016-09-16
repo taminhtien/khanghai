@@ -27,6 +27,7 @@ gem 'rails_admin'
 gem 'ckeditor'
 gem 'devise'
 gem 'will_paginate-bootstrap'
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'rspec-rails'

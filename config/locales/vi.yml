@@ -1,0 +1,17 @@
+vi:
+  home_page:
+    header:
+      company_name: 'Công ty Luật Khang Hải'
+      working_hour: 'Thứ 2 - Thứ 7: 7:00 - 17:00'
+      email: 'lskhanghai@gmail.com'
+      address: '1/4D Bà Triệu, Hóc Môn, TP. HCM'
+      hotline: '0908362606'
+      hotline_subtitle: 'Đường dây nóng'
+      office_phone_number: '0837100638'
+      office_phone_number_subtitle: 'Văn phòng tại TP. HCM'
+      free_consultant: 'TƯ VẤN MIỄN PHÍ'
+      home: 'Trang chủ'
+      service: 'Dịch vụ'
+      about_us: 'Giới thiệu'
+      news: 'Tin tức'
+      contact_us: 'Liên hệ'
