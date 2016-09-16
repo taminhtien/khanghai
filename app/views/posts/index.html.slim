@@ -3,4 +3,10 @@
 - breadcrumb :posts
 
 #posts-index-container
-  = render @posts
+  - if @posts.empty?
+    p No posts found
+  - else
+    = render @posts
+
+    .pagination-wrapper
+      = will_paginate @posts, renderer: BootstrapPagination::Rails

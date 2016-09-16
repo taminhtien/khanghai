@@ -4,7 +4,7 @@
       = link_to image_tag(post.picture.url(:large)), class: 'img-responsive'
       .meta
         .meta-data
-          time datetime="#{post.created_at}" = post.created_at
+          time datetime="#{post.created_at}" = format_datetime(post.created_at)
           span.meta-data__separator |
           span.meta-data__author = post.user.name
           span.meta-data__separator |

@@ -1,0 +1,19 @@
+#posts-index-container {
+  .pagination-wrapper {
+    display: flex;
+    justify-content: center;
+
+    ul > li {
+      > a {
+        color: $tan;
+      }
+
+      &.active {
+        span {
+          background-color: $tan;
+          border-color: $tan;
+        }
+      }
+    }
+  }
+}

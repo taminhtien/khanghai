@@ -24,7 +24,7 @@ html
             .widget.widget_search
               = form_tag '/posts', method: :get do
                 label
-                  = search_field_tag :q, 'Search...', class: 'search-field'
+                  = search_field_tag :q, nil, placeholder: 'Search...', class: 'search-field'
 
                 = content_tag :button, type: :submit, class: 'search-submit' do
                   i.fa.fa-lg.fa-search
@@ -35,7 +35,7 @@ html
               ul
                 - Category.all.each do |category|
                   li
-                    = link_to category.name, category
+                    = link_to category.name, category_posts_path(category)
 
             .widget
               h4.sidebar__headings Facebook

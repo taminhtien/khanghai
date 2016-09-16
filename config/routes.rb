@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   resources :services, only: [:index, :show]
   resources :contacts, only: [:new, :create]
   resources :posts, only: [:index, :show]
-  resources :categories, only: [:show]
+  
+  resources :categories, only: [:show] do
+    resources :posts, only: [:index]
+  end
 
   get '/about-us' => 'pages#about_us', as: 'about_us'
   get '/contact-us' => 'contacts#new', as: 'contact_us'

@@ -26,6 +26,7 @@ gem 'gretel'
 gem 'rails_admin'
 gem 'ckeditor'
 gem 'devise'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'rspec-rails'
