@@ -11,7 +11,6 @@ puts "==== Create Users ===="
       name: 'Admin',
       email: 'admin@example.com',
       password: '123123123',
-      position: 'Admin',
       role: :admin,
       description: 'Peter is regarded as one of the most respected attorneys in not only the state of New York, but entire country, because of his long list of achievements and successful cases.',
       picture: File.open("#{image_path}/users/picture/medium/missing.jpg"),

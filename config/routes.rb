@@ -14,4 +14,5 @@ Rails.application.routes.draw do
 
   get '/about-us' => 'pages#about_us', as: 'about_us'
   get '/contact-us' => 'contacts#new', as: 'contact_us'
+  get '/coming_soon' => 'home#coming_soon', as: 'coming_soon'
 end
