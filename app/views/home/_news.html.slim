@@ -14,9 +14,9 @@
           .col-md-4
             .latest-news__container
               - @posts[2..-1].each do |post|
-                = link_to '#', class: 'latest-news latest-news--inline' do
+                = link_to post, class: 'latest-news latest-news--inline' do
                   .latest-news__content
                     h4.latest-news__title = post.title
                     .latest-news__full-date = format_datetime(post.created_at)
 
-              = link_to 'More news', '#', class: 'latest-news latest-news--more-news'
+              = link_to 'More news', posts_path, class: 'latest-news latest-news--more-news'

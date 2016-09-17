@@ -26,13 +26,8 @@
 
         .row
           .team-members
-            .col-md-4
-              = render 'shared/employee'
-
-            .col-md-4
-              = render 'shared/employee'
-
-            .col-md-4
-              = render 'shared/employee'
+            - @employees.each do |employee|
+              .col-md-4
+                = render partial: 'shared/employee', locals: { employee: employee }
 
             .clearfix

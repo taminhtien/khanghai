@@ -6,7 +6,7 @@ class HomeController < ApplicationController
     @services = Service.all
     @major_services = @services[0..2]
     @minor_services = @services[3..-1]
-    @employees = User.all
+    @employees = User.where.not(role: :admin)
   end
 
   def coming_soon; end
