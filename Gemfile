@@ -28,6 +28,8 @@ gem 'ckeditor'
 gem 'devise'
 gem 'will_paginate-bootstrap'
 gem 'rails-i18n'
+gem 'cancancan'
+gem 'enumerize'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -1,14 +1,14 @@
 .shared-employee-container
   .person-profile
-    = image_tag 'person.jpg', class: 'person-profile__image'
+    = image_tag employee.picture.url(:medium), class: 'person-profile__image'
     .person-profile__container
       .person-profile__content
-        span.person-profile__tag CEO
-        h3.person-profile__name George Hilton
-        p.person-profile__description I'm a London based lawyer and I was born and raised in Manchester. I completed my Masters in Law. I'm the CEO of this firm.
+        span.person-profile__tag = employee.role
+        h3.person-profile__name = employee.name
+        p.person-profile__description = employee.description.truncate(200)
       .person-profile__social-icons
         span Meet me on
-        = link_to '#', class: 'person-profile__social_icon' do
+        = link_to employee.facebook_url, class: 'person-profile__social_icon' do
           = fa_icon 'facebook-square'
         = link_to '#', class: 'person-profile__social_icon' do
           = fa_icon 'twitter-square'

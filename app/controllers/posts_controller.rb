@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show]
 
   def index
+    @ceo = User.find_by_position(:ceo)  
     @posts = Post.all
     @posts = @posts.where(category_id: params[:category_id]) if params[:category_id].present?
     @posts = @posts.where('title ILIKE ?', "%#{params[:q]}%") if params[:q].present?

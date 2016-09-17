@@ -18,8 +18,10 @@ html
         
         .col-xs-12.col-md-3
           .sidebar role='complementary'
-            .widget.widget-person-profile
-              = render 'shared/employee'
+          
+            - if User.find_by_role(:ceo)
+              .widget.widget-person-profile
+                = render partial: 'shared/employee', locals: { employee: User.find_by_role(:ceo) }
             
             .widget.widget_search
               = form_tag '/posts', method: :get do

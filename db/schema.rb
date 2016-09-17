@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910081925) do
+ActiveRecord::Schema.define(version: 20160917040735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,9 +91,8 @@ ActiveRecord::Schema.define(version: 20160910081925) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "position"
     t.text     "description"
-    t.string   "facebook_id"
+    t.string   "facebook_url"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -108,6 +107,7 @@ ActiveRecord::Schema.define(version: 20160910081925) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.string   "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

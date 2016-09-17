@@ -9,11 +9,6 @@
             = link_to '#', class: 'read-more' do
               = fa_icon "long-arrow-right", text: 'Read more', right: true
 
-      .col-md-3
-        = render 'shared/employee'
-
-      .col-md-3
-        = render 'shared/employee'
-
-      .col-md-3
-        = render 'shared/employee'
+      - @employees.each do |employee|
+        .col-md-3
+          = render partial: 'shared/employee', locals: { employee: employee }
