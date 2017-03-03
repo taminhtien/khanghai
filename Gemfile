@@ -30,6 +30,7 @@ gem 'will_paginate-bootstrap'
 gem 'rails-i18n'
 gem 'cancancan'
 gem 'enumerize'
+gem 'mina', '~> 0.3.8'
 
 group :development, :test do
   gem 'rspec-rails'
