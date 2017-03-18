@@ -75,6 +75,12 @@ task :deploy => :environment do
   end
 end
 
+desc "Seed data to the database"
+task :seed => :environment do
+  queue "cd /home/khanghai/production/current"
+  queue "bundle exec rake db:seed RAILS_ENV=production"
+end
+
 desc "Logs"
 task :logs do
   queue 'echo "Contents of the log file are as follows:"'
