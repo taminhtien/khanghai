@@ -34,5 +34,6 @@ module Khanghai
     I18n.available_locales = [:en, :vi]
     config.time_zone = 'Hanoi'
     config.i18n.default_locale = :vi
+    config.assets.precompile += %w( ckeditor/*  )
   end
 end
