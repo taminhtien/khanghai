@@ -25,7 +25,7 @@ set :user, user
 set :rails_env, stage
 set :deploy_to, "/home/#{user}/#{stage}"
 set :term_mode, nil
-set :shared_paths, ['config/database.yml', 'log', 'tmp', 'files']
+set :shared_paths, ['config/database.yml', 'log', 'tmp', 'public/system']
 set :rvm_path, "/home/#{user}/.rvm/scripts/rvm"
 set :repository, "ssh://#{user}@localhost/~/git/#{app}.git"
 
