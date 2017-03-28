@@ -14,5 +14,5 @@
         = link_to post.title, post
     
     .entry-content
-      p = post.content.truncate(400)
+      == post.content.truncate(400)
       p = link_to 'Read more', post, class: 'more-link'
