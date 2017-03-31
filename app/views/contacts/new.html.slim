@@ -1,5 +1,5 @@
-- provide(:main_title_primary, 'Contact Us')
-- provide(:main_title_secondary, 'We are waiting you to get in touch with us')
+- provide(:main_title_primary, 'Liên hệ')
+- provide(:main_title_secondary, 'Liên hệ với chúng tôi nếu bạn có nhu cầu')
 - breadcrumb :contact_us
 
 #contacts-new-container
@@ -16,77 +16,75 @@
             .col-md-3
               .contact-details
                 h3.widget-title
-                  span.widget-title__inline Contact details
+                  span.widget-title__inline Liên hệ
                 .textwidget
-                  p Your own voltion due to shameful or scandalous behavior, including don't forget.
+                  p Bạn đang cần được tư vấn pháp lý? Bạn đang gặp phải những vấn đề luật pháp? Hãy liên hệ với chúng tôi
                   p
-                    strong LegalPress, Itd.
+                    strong Công ty Luật TNHH Khang Hải
                     br
-                    | 227 Marion Street
-                    br
-                    | Columbia, SC 29201
+                    | 1/4D Bà Triệu, Ấp Đình, Xã Tân Xuân, Huyện Hóc Môn, TP.Hồ Chí Minh
                   p
-                    | 1-888-123-4567
+                    | Website: www.khanghai.com.vn
                     br
-                    | 1-888-123-4568
+                    | Tel: 08.37100638 - Fax: 08.37100738
                     br
-                    = link_to 'khanghai@gmail.com', 'mailto:khanghai@gmail.com'
+                    = link_to 'Email: lskhanghai@gmail.com', 'mailto:lskhanghai@gmail.com'
             
               .featured-widget
                 .time-table
-                  h3 Opening Time
+                  h3 Giờ làm việc
                   .inner-bg
                     dl.week-day
-                      dt Monday
-                      dd 8:00-16:00
+                      dt Thứ hai
+                      dd 8:00-19:00
                     dl.week-day
-                      dt Tuesday
-                      dd 8:00-16:00
+                      dt Thứ ba
+                      dd 8:00-19:00
                     dl.week-day
-                      dt Wednesday
-                      dd 8:00-16:00
+                      dt Thứ tư
+                      dd 8:00-19:00
                     dl.week-day
-                      dt Thursday
-                      dd 8:00-16:00
+                      dt Thứ năm
+                      dd 8:00-19:00
                     dl.week-day
-                      dt Friday
-                      dd 8:00-16:00
+                      dt Thứ sáu
+                      dd 8:00-19:00
                     dl.week-day
-                      dt Saturday
-                      dd 8:00-16:00
+                      dt Thứ 7
+                      dd 8:00-19:00
                   
             .col-md-9
               #contact-form
                 h3.widget-title
-                  span.widget-title__inline Send us an email, or three
+                  span.widget-title__inline Gởi mail cho chúng tôi nếu bạn cần tư vấn
                 .textwidget
-                  p But i must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and i will give you a complete count of the system, and expound the actual things of the great explorer idea announcing.
+                  p Điền vào mẫu sau và gởi, chúng tôi sẽ liên hệ bạn nhanh nhất có thể.
 
                   = simple_form_for @contact, method: :post do |f|
                     .row
                       .col-xs-12.col-md-4
                         span.contact-us-form-control
-                          = f.input :first_name, placeholder: 'First name', label: false
+                          = f.input :first_name, placeholder: 'Tên', label: false
                       .col-xs-12.col-md-4
                         span.contact-us-form-control
-                          = f.input :last_name, placeholder: 'Last name', label: false
+                          = f.input :last_name, placeholder: 'Họ', label: false
                     
                     .row
                       .col-xs-12.col-md-4
                         span.contact-us-form-control
-                          = f.input :email, placeholder: 'Email address', as: :email, label: false
+                          = f.input :email, placeholder: 'Địa chỉ email', as: :email, label: false
                       .col-xs-12.col-md-4
                         span.contact-us-form-control
-                          = f.input :phone_number, placeholder: 'Phone number', label: false
+                          = f.input :phone_number, placeholder: 'Số điện thoại', label: false
 
                     .row
                       .col-xs-12.col-md-8
                         span.contact-us-form-control
-                          = f.input :subject, placeholder: 'Subject', label: false
+                          = f.input :subject, placeholder: 'Tiêu đề', label: false
 
                     .row
                       .col-xs-12
                         span.contact-us-form-control
-                          = f.input :message, placeholder: 'Message', as: :text, label: false
+                          = f.input :message, placeholder: 'Nội dung cần tư vấn', as: :text, label: false
                         br
-                        = f.submit 'SEND MESSAGE', class: 'btn btn-raised btn-primary'
+                        = f.submit 'Gởi', class: 'btn btn-raised btn-primary'

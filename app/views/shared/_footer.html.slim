@@ -6,10 +6,10 @@
           .col-xs-12.col-md-3
             p
               = link_to (image_tag 'logo.jpg', class: 'img-responsive'), root_url
-            p But i must explain to you how all this mistaken idea pleasure and praising pain was born and i will give you. But i explain to you how all this mistaken idea.
+            p Niềm vui của các bạn là hạnh phúc của chúng tôi.
 
           .col-xs-12.col-md-3
-            h6 Navigation
+            h6 Điều hướng
             ul
               li = link_to 'Home', root_path
               li = link_to 'Our Services', services_path
@@ -18,7 +18,7 @@
               li = link_to 'Contact Us', contact_us_path
 
           .col-xs-12.col-md-3
-            h6 Practice Areas
+            h6 Liên kết
             ul
               li = link_to 'All Services', services_path
               - Service.all.each do |service|

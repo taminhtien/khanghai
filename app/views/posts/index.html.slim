@@ -1,10 +1,10 @@
-- provide(:main_title_primary, 'Legal News')
-- provide(:main_title_secondary, 'What we do and what can you expect from us')
+- provide(:main_title_primary, 'Tin tức pháp luật')
+- provide(:main_title_secondary, 'Những tin tức và câu chuyện pháp luật được trải nghiệm bởi chính đội ngũ luật sư chúng tôi')
 - breadcrumb :posts
 
 #posts-index-container
   - if @posts.empty?
-    p No posts found
+    p Không có bài viết
   - else
     = render @posts
 
