@@ -1,0 +1,12 @@
+= simple_form_for [:admin, @contract], wrapper: :vertical_form do |f|
+  = f.input :code
+  = f.input :customer_id, as: :select, collection: Customer.order(:name)
+  = f.input :type, as: :select
+  = f.input :assignee
+  = f.input :assigned_date
+  = f.input :estimate_completed_date
+  = f.input :summary
+  = f.input :requirement
+  = f.input :development
+  = f.input :propose_assignee
+  = f.submit 'Submit', class: 'btn btn-default'

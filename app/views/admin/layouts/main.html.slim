@@ -11,7 +11,7 @@ html lang="en"
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand href="index.html"  SB Admin v2.0
+          a.navbar-brand href="index.html" Khang Hai Admin v1.0
         /! /.navbar-header
         ul.nav.navbar-top-links.navbar-right
           li.dropdown
@@ -178,9 +178,9 @@ html lang="en"
                       i.fa.fa-search
                 /! /input-group
               li
-                a href="index.html" 
-                  i.fa.fa-dashboard.fa-fw
-                  | Dashboard
+                = link_to 'Customers', admin_customers_path
+              li
+                = link_to 'Contracts', admin_contracts_path
               li
                 a href="#" 
                   i.fa.fa-bar-chart-o.fa-fw
@@ -259,14 +259,7 @@ html lang="en"
         /! /.navbar-static-side
       /! Page Content
       #page-wrapper
-        .container-fluid
-          .row
-            .col-lg-12
-              h1.page-header Blank
-              = yield
-            /! /.col-lg-12
-          /! /.row
-        /! /.container-fluid
+        = yield
       /! /#page-wrapper
     /! /#wrapper
     /! jQuery
@@ -277,3 +270,4 @@ html lang="en"
     / script src="../vendor/metisMenu/metisMenu.min.js" 
     /! Custom Theme JavaScript
     / script src="../dist/js/sb-admin-2.js" 
+    = javascript_initialization

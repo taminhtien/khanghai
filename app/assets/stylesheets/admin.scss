@@ -1,4 +1,5 @@
-@import "bootstrap-sass";
+@import 'bootstrap-sprockets';
+@import "bootstrap";
 @import "sb-admin-2.min";
 @import "metisMenu.min";
-@import "font-awesome";
+@import 'font-awesome';

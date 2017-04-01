@@ -1,0 +1,42 @@
+.row
+  .col-lg-12
+    h1.page-header Contract
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading Contract
+      .panel-body
+        .row
+          .col-lg-12
+            table.table
+              tr
+                th = Contract.human_attribute_name(:code)
+                td = @contract.code
+              tr
+                th = Contract.human_attribute_name(:customer)
+                td
+                  = link_to @contract.customer.name, [:admin, @contract.customer]
+              tr
+                th = Contract.human_attribute_name(:type)
+                td = @contract.type
+              tr
+                th = Contract.human_attribute_name(:assignee)
+                td = @contract.assignee
+              tr
+                th = Contract.human_attribute_name(:assigned_date)
+                td = @contract.assigned_date
+              tr
+                th = Contract.human_attribute_name(:estimate_completed_date)
+                td = @contract.estimate_completed_date
+              tr
+                th = Contract.human_attribute_name(:summary)
+                td = @contract.summary
+              tr
+                th = Contract.human_attribute_name(:requirement)
+                td = @contract.requirement
+              tr
+                th = Contract.human_attribute_name(:development)
+                td = @contract.development
+              tr
+                th = Contract.human_attribute_name(:propose_assignee)
+                td = @contract.propose_assignee

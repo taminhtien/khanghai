@@ -1,0 +1,50 @@
+.row
+  .col-lg-12
+    h1.page-header Contracts
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading Contracts
+      .panel-body
+        .row
+          .col-lg-12
+            .pull-right
+              = link_to 'Create Contract', new_admin_contract_path, class: 'btn btn-default'
+
+            table.table.table-striped
+              thead
+                tr
+                  th = Contract.human_attribute_name(:code)
+                  th = Contract.human_attribute_name(:customer)
+                  th = Contract.human_attribute_name(:type)
+                  th = Contract.human_attribute_name(:assignee)
+                  th = Contract.human_attribute_name(:assigned_date)
+                  th = Contract.human_attribute_name(:estimate_completed_date)
+                  th = Contract.human_attribute_name(:summary)
+                  th = Contract.human_attribute_name(:requirement)
+                  th = Contract.human_attribute_name(:development)
+                  th = Contract.human_attribute_name(:propose_assignee)
+                  th Action
+              tbody
+                - @contracts.each do |contract|
+                  tr
+                    td = contract.code
+                    td
+                      = link_to contract.customer.name, [:admin, contract.customer]
+                    td = contract.type
+                    td = contract.assignee
+                    td = contract.assigned_date
+                    td = contract.estimate_completed_date
+                    td = contract.summary
+                    td = contract.requirement
+                    td = contract.development
+                    td = contract.propose_assignee
+                    td
+                      ul.list-inline
+                        li = link_to 'Show', [:admin, contract]
+                        li = link_to 'Edit', [:edit, :admin, contract]
+                        li = link_to 'Delete', '#', data: { toggle: 'confirmation', href: admin_contract_path(contract), placement: 'top' }, class: 'delete'
+                        / li = link_to 'Delete', admin_Contract_path(customer), method: :delete, data: { confirm: 'Are you sure?' } 
+
+            .text-center
+              = will_paginate @contracts, renderer: BootstrapPagination::Rails, inner_window: 3, outer_window: 1

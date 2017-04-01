@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get '/', to: "home#index"
 
-    resources :posts
+    resources :customers
+    resources :contracts
   end
 
   get '/about-us' => 'pages#about_us', as: 'about_us'

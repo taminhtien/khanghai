@@ -1,0 +1,39 @@
+.row
+  .col-lg-12
+    h1.page-header Customer
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading Customer
+      .panel-body
+        .row
+          .col-lg-12
+            .pull-right
+              = link_to 'Create Customer', new_admin_customer_path, class: 'btn btn-default'
+
+            table.table.table-striped
+              thead
+                tr
+                  th = Customer.human_attribute_name(:name)
+                  th = Customer.human_attribute_name(:birthday)
+                  th = Customer.human_attribute_name(:permanent_address)
+                  th = Customer.human_attribute_name(:contact_address)
+                  th = Customer.human_attribute_name(:phone_number)
+                  th Action
+              tbody
+                - @customers.each do |customer|
+                  tr
+                    td = customer.name
+                    td = customer.birthday
+                    td = customer.permanent_address
+                    td = customer.contact_address
+                    td = customer.phone_number
+                    td
+                      ul.list-inline
+                        li = link_to 'Show', [:admin, customer]
+                        li = link_to 'Edit', [:edit, :admin, customer]
+                        li = link_to 'Delete', '#', data: { toggle: 'confirmation', href: admin_customer_path(customer), placement: 'top' }, class: 'delete'
+                        / li = link_to 'Delete', admin_customer_path(customer), method: :delete, data: { confirm: 'Are you sure?' } 
+
+            .text-center
+              = will_paginate @customers, renderer: BootstrapPagination::Rails, inner_window: 3, outer_window: 1

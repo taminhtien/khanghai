@@ -1,0 +1,23 @@
+.row
+  .col-lg-12
+    h1.page-header Customer
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading Customer
+      .panel-body
+        .row
+          .col-lg-12
+            table.table
+              tr
+                th = Customer.human_attribute_name(:name)
+                td = @customer.name
+              tr
+                th = Customer.human_attribute_name(:birthday)
+                td = @customer.birthday
+              tr
+                th = Customer.human_attribute_name(:permanent_address)
+                td = @customer.permanent_address
+              tr
+                th = Customer.human_attribute_name(:contact_address)
+                td = @customer.contact_address

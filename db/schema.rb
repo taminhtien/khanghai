@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917040735) do
+ActiveRecord::Schema.define(version: 20170401114852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,29 @@ ActiveRecord::Schema.define(version: 20160917040735) do
     t.string "phone_number"
     t.string "subject"
     t.text   "message"
+  end
+
+  create_table "contracts", force: :cascade do |t|
+    t.string   "code"
+    t.string   "type"
+    t.string   "assignee"
+    t.datetime "assigned_date"
+    t.datetime "estimate_completed_date"
+    t.text     "summary"
+    t.text     "requirement"
+    t.text     "development"
+    t.string   "propose_assignee"
+    t.integer  "customer_id"
+  end
+
+  add_index "contracts", ["customer_id"], name: "index_contracts_on_customer_id", using: :btree
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "permanent_address"
+    t.string   "contact_address"
+    t.string   "phone_number"
+    t.datetime "birthday"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
