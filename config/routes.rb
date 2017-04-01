@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   mount Ckeditor::Engine => '/ckeditor'
   root 'home#index'
 
@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   
   resources :categories, only: [:show] do
     resources :posts, only: [:index]
+  end
+
+  namespace :admin do
+    get '/', to: "home#index"
+
+    resources :posts
   end
 
   get '/about-us' => 'pages#about_us', as: 'about_us'

@@ -1,5 +1,4 @@
 class Post < ActiveRecord::Base
-  include RailsAdmin::Post
   extend FriendlyId
 
   belongs_to :category
