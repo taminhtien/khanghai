@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401114852) do
+ActiveRecord::Schema.define(version: 20170402100731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -38,12 +40,14 @@ ActiveRecord::Schema.define(version: 20170401114852) do
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "contacts", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "phone_number"
-    t.string "subject"
-    t.text   "message"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.string   "subject"
+    t.text     "message"
+    t.datetime "created_at",   default: '2017-04-02 10:08:35'
+    t.datetime "updated_at",   default: '2017-04-02 10:08:35'
   end
 
   create_table "contracts", force: :cascade do |t|
@@ -57,6 +61,8 @@ ActiveRecord::Schema.define(version: 20170401114852) do
     t.text     "development"
     t.string   "propose_assignee"
     t.integer  "customer_id"
+    t.datetime "created_at",              default: '2017-04-01 15:38:45'
+    t.datetime "updated_at",              default: '2017-04-01 15:38:45'
   end
 
   add_index "contracts", ["customer_id"], name: "index_contracts_on_customer_id", using: :btree
@@ -67,6 +73,8 @@ ActiveRecord::Schema.define(version: 20170401114852) do
     t.string   "contact_address"
     t.string   "phone_number"
     t.datetime "birthday"
+    t.datetime "created_at",        default: '2017-04-01 15:38:45'
+    t.datetime "updated_at",        default: '2017-04-01 15:38:45'
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -108,20 +116,23 @@ ActiveRecord::Schema.define(version: 20170401114852) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.string   "short_description"
+    t.datetime "created_at",           default: '2017-04-01 15:11:59'
+    t.datetime "updated_at",           default: '2017-04-01 15:11:59'
   end
 
   add_index "services", ["slug"], name: "index_services_on_slug", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "first_name"
     t.text     "description"
     t.string   "facebook_url"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",                    null: false
+    t.string   "encrypted_password",     default: "",                    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,                     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
@@ -131,6 +142,11 @@ ActiveRecord::Schema.define(version: 20170401114852) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.string   "role"
+    t.datetime "created_at",             default: '2017-04-01 15:38:45'
+    t.datetime "updated_at",             default: '2017-04-01 15:38:45'
+    t.string   "job_title"
+    t.string   "salutation"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

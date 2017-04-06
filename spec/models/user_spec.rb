@@ -5,7 +5,9 @@ describe User do
     it { is_expected.to validate_presence_of :name }
     it { is_expected.to validate_presence_of :role }
     it { is_expected.to validate_presence_of :description }
-    it { is_expected.to enumerize(:role).in(:admin, :employee, :ceo) }
+    it { is_expected.to validate_presence_of :salutation }
+    it { is_expected.to validate_presence_of :job_title }
+    it { is_expected.to enumerize(:role).in(:admin, :staff) }
   end
 
   context 'associations' do

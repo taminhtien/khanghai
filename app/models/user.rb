@@ -9,12 +9,20 @@ class User < ActiveRecord::Base
   has_attached_file    :picture, styles:       { medium: '353x235#' },
                                  default_url:  'users/picture/:style/missing.png'
 
-  enumerize :role, in: [:admin, :employee, :ceo], default: :employee
+  enumerize :role, in: [:admin, :staff]
+  enumerize :salutation, in: [:mr, :mrs, :miss, :ms], default: :mr
 
   validates_attachment :picture, content_type: { content_type: /\Aimage\/.*\Z/ },
                                  size:         { less_than: 5.megabyte }
 
-  validates :name, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :role, presence: true
   validates :description, presence: true
+  validates :job_title, presence: true
+  validates :salutation,    presence: true
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

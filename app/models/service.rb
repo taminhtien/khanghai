@@ -9,8 +9,9 @@ class Service < ActiveRecord::Base
   validates_attachment :picture, content_type: { content_type: /\Aimage\/.*\Z/ },
                                  size:         { less_than: 5.megabyte }
 
-  validates   :title,   presence: true
-  validates   :content, presence: true
+  validates :title, presence: true
+  validates :short_description, presence: true
+  validates :content, presence: true
 
   def slug_candidates
     [

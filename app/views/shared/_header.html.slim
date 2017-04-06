@@ -16,12 +16,8 @@
           h4 = t('home_page.header.address')
 
         .widget.social-links
-          = link_to 'https://www.facebook.com/khanghailawfirm', class: 'social-icon', target: '_blank' do
-            = fa_icon 'facebook-square'
-          = link_to 'javascript:', class: 'social-icon', target: '_blank' do
-            = fa_icon 'twitter-square'
-          = link_to 'javascript:', class: 'social-icon', target: '_blank' do
-            = fa_icon 'youtube-square'
+          = link_to 'VN', change_locale_path(:vn), class: 'social-icon'
+          = link_to 'EN', change_locale_path(:en), class: 'social-icon'
 
   .container
     .header

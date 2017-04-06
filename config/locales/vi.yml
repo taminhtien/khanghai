@@ -1,4 +1,223 @@
 vi:
+  active_record:
+    attributes:
+      customer:
+        name: 'Họ và Tên'
+        permanent_address: 'Địa chỉ thường trú'
+        contact_address: 'Địa chỉ liên hệ'
+        phone_number: 'Số điện thoại'
+        birthday: 'Năm sinh'
+      service:
+        title: 'Tiêu đề'
+        short_description: 'Miêu tả ngắn'
+        content: 'Nội dung'
+        picture: 'Ảnh minh họa'
+        slug: 'Đường dẫn URL'
+      post:
+        title: 'Tiêu đề'
+        category_id: 'Thư mục'
+        user_id: 'Tác giả'
+        content: 'Nội dung'
+        picture: 'Ảnh minh họa'
+        slug: 'Đường dẫn URL'
+      contact:
+        first_name: 'Tên'
+        last_name: 'Họ'
+        email: 'Email'
+        phone_number: 'Số điện thoại'
+        subject: 'Chủ đề'
+        message: 'Tin nhắn'
+      user:
+        email: 'Email'
+        salutation: 'Danh xưng'
+        first_name: 'Tên'
+        last_name: 'Họ'
+        role: 'Vai trò'
+        job_title: 'Nghề nghiệp'
+        sign_in_count: 'Lượt truy cập'
+        last_sign_in: 'Lần cuối truy cập'
+      category:
+        name: 'Tên thư mục'
+  customer:
+    show:
+      heading: 'Khách hàng'
+    index:
+      heading: 'Danh sách khách hàng'
+      create: 'Tạo khách hàng'
+    new:
+      heading: 'Tạo khách hàng'
+    edit:
+      heading: 'Sửa thông tin khách hàng'
+    name: 'Họ và Tên'
+    permanent_address: 'Địa chỉ thường trú'
+    contact_address: 'Địa chỉ liên hệ'
+    phone_number: 'Số điện thoại'
+    birthday: 'Năm sinh'
+  service:
+    show:
+      heading: 'Dịch vụ'
+    index:
+      heading: 'Danh sách dịch vụ'
+      create: 'Tạo dịch vụ'
+    new:
+      heading: 'Tạo dịch vụ'
+    edit:
+      heading: 'Sửa thông tin dịch vụ'
+    title: 'Tiêu đề'
+    short_description: 'Miêu tả ngắn'
+    content: 'Nội dung'
+    picture: 'Ảnh minh họa'
+    slug: 'Đường dẫn URL'
+  category:
+    show:
+      heading: 'Thư mục'
+    index:
+      heading: 'Danh sách thư mục'
+      create: 'Tạo danh mục'
+    new:
+      heading: 'Tạo danh mục'
+    edit:
+      heading: 'Sửa danh mục'
+    name: 'Tên thư mục'
+  post:
+    show:
+      heading: 'Bài viết'
+    index:
+      heading: 'Danh sách bài viết'
+      create: 'Tạo bài viết'
+    new:
+      heading: 'Tạo bài viết'
+    edit:
+      heading: 'Sửa thông tin bài viết'
+    title: 'Tiêu đề'
+    category: 'Thư mục'
+    name: 'Người viết bài'
+    content: 'Nội dung'
+    picture: 'Ảnh minh họa'
+    slug: 'Đường dẫn URL'
+  contact:
+    show:
+      heading: 'Chi tiết liên hệ'
+    index:
+      heading: 'Danh sách liên hệ'
+      create: 'Tạo mới liên hệ'
+    new:
+      heading: 'Tạo liên hệ mới'
+    edit:
+      heading: 'Sửa thông tin liên hệ'
+    first_name: 'Tên'
+    last_name: 'Họ'
+    email: 'Email'
+    phone_number: 'Số điện thoại'
+    subject: 'Chủ đề'
+    message: 'Tin nhắn'
+  user:
+    show:
+      heading: 'Người dùng'
+    index:
+      heading: 'Danh sách người dùng'
+      create: 'Tạo người dùng mới'
+    new:
+      heading: 'Tạo người dùng'
+    edit:
+      heading: 'Sửa thông tin người dùng'
+    email: 'Email'
+    salutation: 'Danh xưng'
+    first_name: 'Tên'
+    last_name: 'Họ'
+    role: 'Vai trò'
+    job_title: 'Nghề nghiệp'
+    sign_in_count: 'Lượt truy cập'
+    last_sign_in: 'Lần cuối truy cập'
+    never_logged_in: 'Chưa đăng nhập'
+  contract:
+    show:
+      heading: 'Hợp đồng'
+    index:
+      heading: 'Danh sách hợp đồng'
+      create: 'Tạo hợp đồng mới'
+    new:
+      heading: 'Tạo hợp đồng'
+    edit:
+      heading: 'Sửa thông tin hợp đồng'
+    code: 'Mã hợp đồng'
+    customer: 'Khách hàng'
+    first_name: 'Tên'
+    last_name: 'Họ'
+    role: 'Vai trò'
+    assigned_date: 'Ngày chỉ định'
+    assignee: 'Người được chỉ định'
+    assignee_date: 'Ngày tạo chỉ định'
+    estimate_completed_date: 'Dự đoán ngày hoàn thành'
+    summary: 'Tổng quan'
+    requirement: 'Yêu cầu của khách'
+    development: 'Diễn biến vụ việc'
+    propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
+  shared:
+    action: 'Hành động'
+    show: 'Xem'
+    edit: 'Sửa'
+    delete: 'Xóa'
+    confirm_delete: 'Bạn có chắc chắn muốn xóa?'
+    submit: 'Gửi'
+    created_at: 'Ngày tạo'
+    updated_at: 'Lần cuối chỉnh sửa'
+    ago: ' trước'
+  simple_form:
+    labels:
+      customer:
+        name: 'Họ và Tên'
+        permanent_address: 'Địa chỉ thường trú'
+        contact_address: 'Địa chỉ liên hệ'
+        phone_number: 'Số điện thoại'
+        birthday: 'Năm sinh'
+      service:
+        title: 'Tiêu đề'
+        short_description: 'Miêu tả ngắn'
+        content: 'Nội dung'
+        picture: 'Ảnh minh họa'
+        slug: 'Đường dẫn URL'
+      post:
+        title: 'Tiêu đề'
+        category_id: 'Thư mục'
+        user_id: 'Người viết bài'
+        content: 'Nội dung'
+        picture: 'Ảnh minh họa'
+        slug: 'Đường dẫn URL'
+      contact:
+        first_name: 'Tên'
+        last_name: 'Họ'
+        email: 'Email'
+        phone_number: 'Số điện thoại'
+        subject: 'Chủ đề'
+        message: 'Tin nhắn'
+      user:
+        email: 'Email'
+        salutation: 'Danh xưng'
+        first_name: 'Tên'
+        last_name: 'Họ'
+        job_title: 'Nghề nghiệp'
+        sign_in_count: 'Lượt truy cập'
+        last_sign_in: 'Lần cuối truy cập'
+        role: 'Vai trò'
+        password: 'Mật khẩu'
+        password_confirmation: 'Nhập lại mật khẩu'
+      category:
+        name: 'Tên thư mục'
+    options:
+      user:
+        role:
+          admin: 'Quản trị viên'
+          staff: 'Nhân viên công ty'
+  admin:
+    menu:
+      customers: 'Khách hàng'
+      services: 'Dịch vụ'
+      posts: 'Bài viết'
+      users: 'Người dùng'
+      categories: 'Thư mục'
+      contacts: 'Liên hệ'
+      contracts: 'Hợp đồng'
   home_page:
     header:
       company_name: 'Công ty Luật Khang Hải'

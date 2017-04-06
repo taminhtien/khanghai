@@ -1,23 +1,23 @@
 .row
   .col-lg-12
-    h1.page-header Customer
+    h1.page-header = t('customer.show.heading')
 .row
   .col-lg-12
     .panel.panel-default
-      .panel-heading Customer
+      .panel-heading = t('customer.show.heading')
       .panel-body
         .row
           .col-lg-12
             table.table
               tr
-                th = Customer.human_attribute_name(:name)
+                th = t('customer.name')
                 td = @customer.name
               tr
-                th = Customer.human_attribute_name(:birthday)
+                th = t('customer.birthday')
                 td = @customer.birthday
               tr
-                th = Customer.human_attribute_name(:permanent_address)
+                th = t('customer.permanent_address')
                 td = @customer.permanent_address
               tr
-                th = Customer.human_attribute_name(:contact_address)
+                th = t('customer.contact_address')
                 td = @customer.contact_address

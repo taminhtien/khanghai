@@ -1,0 +1,42 @@
+.row
+  .col-lg-12
+    h1.page-header = t('service.index.heading')
+.row
+  .col-lg-12
+    .panel.panel-default
+      .panel-heading = t('service.index.heading')
+      .panel-body
+        .row
+          .col-lg-12
+            = link_to t('service.index.create'), new_admin_service_path, class: 'btn btn-default'
+
+            .table-responsive
+              table.table.table-striped
+                thead
+                  tr
+                    th = t('service.title')
+                    th = t('service.short_description')
+                    th = t('service.content')
+                    th = t('service.picture')
+                    th = t('service.slug')
+                    th = t('shared.created_at')
+                    th = t('shared.updated_at')
+                    th = t('shared.action')
+                tbody
+                  - @services.each do |service|
+                    tr
+                      td = service.title
+                      td = service.short_description
+                      td == service.content
+                      td = image_tag service.picture.url, class: 'img-responsive'
+                      td = service.slug
+                      td = service.created_at
+                      td = service.updated_at
+                      td
+                        ul.list-inline
+                          li = link_to t('shared.show'), [:admin, service]
+                          li = link_to t('shared.edit'), [:edit, :admin, service]
+                          li = link_to t('shared.delete'), admin_service_path(service), method: :delete, data: { confirm: t('shared.confirm_delete') } 
+
+            .text-center
+              = will_paginate @services, renderer: BootstrapPagination::Rails, inner_window: 3, outer_window: 1
