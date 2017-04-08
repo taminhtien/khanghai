@@ -3,11 +3,11 @@
     = image_tag employee.picture.url(:medium), class: 'person-profile__image'
     .person-profile__container
       .person-profile__content
-        span.person-profile__tag = employee.role
+        span.person-profile__tag = employee.role_text
         h3.person-profile__name = employee.name
         p.person-profile__description = employee.description.truncate(200)
       .person-profile__social-icons
-        span Meet me on
+        span = t('home_page.employee.meet_me_on')
         = link_to employee.facebook_url, class: 'person-profile__social_icon' do
           = fa_icon 'facebook-square'
         = link_to '#', class: 'person-profile__social_icon' do

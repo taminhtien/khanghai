@@ -17,7 +17,7 @@
                 td = @user.email
               tr
                 th = t('user.salutation')
-                td = @user.salutation
+                td = @user.salutation_text
               tr
                 th = t('user.first_name')
                 td = @user.first_name
@@ -31,6 +31,18 @@
                 th = t('user.job_title')
                 td = @user.job_title
               tr
+                th = t('user.description')
+                td = @user.description
+              tr
+                th = t('user.facebook_url')
+                td = @user.facebook_url
+              tr
+                th = t('user.twitter_url')
+                td = @user.twitter_url
+              tr
+                th = t('user.linkedin_url')
+                td = @user.linkedin_url
+              tr
                 th = t('user.role')
                 td = @user.role_text
               tr
@@ -40,7 +52,7 @@
                 th = t('user.last_sign_in')
                 td
                   - if @user.last_sign_in_at.blank?
-                    = t('user.last_sign_in_at')
+                    = t('user.never_logged_in')
                   - else
                     = time_ago_in_words(@user.last_sign_in_at.to_datetime) + t('shared.ago')
               tr

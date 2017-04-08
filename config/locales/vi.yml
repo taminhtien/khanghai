@@ -26,7 +26,7 @@ vi:
         birthday: 'Năm sinh'
       service:
         title: 'Tiêu đề'
-        short_description: 'Miêu tả ngắn'
+        short_description: 'Mô tả'
         content: 'Nội dung'
         picture: 'Ảnh minh họa'
         slug: 'Đường dẫn URL'
@@ -54,6 +54,10 @@ vi:
         sign_in_count: 'Lượt truy cập'
         last_sign_in: 'Lần cuối truy cập'
         picture: 'Hình đại diện'
+        description: 'Mô tả'
+        facebook_url: 'Địa chỉ Facebook'
+        twitter_url: 'Địa chỉ Twitter'
+        linkedin_url: 'Địa chỉ Linkedin'
       category:
         name: 'Tên thư mục'
       contract:
@@ -96,7 +100,7 @@ vi:
     edit:
       heading: 'Sửa thông tin dịch vụ'
     title: 'Tiêu đề'
-    short_description: 'Miêu tả ngắn'
+    short_description: 'Mô tả'
     content: 'Nội dung'
     picture: 'Ảnh minh họa'
     slug: 'Đường dẫn URL'
@@ -163,6 +167,10 @@ vi:
     last_sign_in: 'Lần cuối truy cập'
     never_logged_in: 'Chưa đăng nhập'
     picture: 'Hình đại diện'
+    description: 'Mô tả'
+    facebook_url: 'Địa chỉ Facebook'
+    twitter_url: 'Địa chỉ Twitter'
+    linkedin_url: 'Địa chỉ Linkedin'
   contract:
     show:
       heading: 'Hợp đồng'
@@ -207,7 +215,7 @@ vi:
         birthday: 'Năm sinh'
       service:
         title: 'Tiêu đề'
-        short_description: 'Miêu tả ngắn'
+        short_description: 'Mô tả'
         content: 'Nội dung'
         picture: 'Ảnh minh họa'
         slug: 'Đường dẫn URL'
@@ -237,6 +245,10 @@ vi:
         password: 'Mật khẩu'
         password_confirmation: 'Nhập lại mật khẩu'
         picture: 'Hình đại diện'
+        description: 'Mô tả'
+        facebook_url: 'Địa chỉ Facebook'
+        twitter_url: 'Địa chỉ Twitter'
+        linkedin_url: 'Địa chỉ Linkedin'
       category:
         name: 'Tên thư mục'
       contract:
@@ -282,6 +294,8 @@ vi:
     team:
       title: 'Đội ngũ'
       subtitle: 'Từ nhóm Luật sư công tác tại Phòng Pháp chế Cảng Sài Gòn, năm 2012 chúng tôi tự tin thành lập Khang Hai & Partners. Kể từ khi thành lập tới nay, với tiềm năng sẵn có về sự nhiệt huyết, sáng tạo của đội ngũ luật sư, cộng sự và sự nhạy bén, dày dạn kinh nghiệm từ Ban Lãnh đạo, Khang Hai & Partners đã không ngừng nỗ lực phấn đấu, đổi mới, ngày một lớn mạnh với từng bước đi vững chắc, gây dựng niềm tin ở các nhà đầu tư và tạo sự tín nhiệm đối với khách hàng.'
+    employee:
+      meet_me_on: 'Liên hệ với tôi'
     contact: 'Liên hệ'
     read_more: 'Chi tiết'
     header:

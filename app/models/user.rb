@@ -24,6 +24,6 @@ class User < ActiveRecord::Base
   validates :salutation,    presence: true
 
   def name
-    "#{first_name} #{last_name}"
+    "#{last_name} #{first_name}"
   end
 end

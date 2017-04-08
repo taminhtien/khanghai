@@ -56,7 +56,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def user_params
-    params.require(:user).permit(:email, :salutation, :first_name, :last_name, :picture, :job_title, :password, :password_confirmation, :role)
+    params.require(:user).permit(:email, :salutation, :first_name, :last_name, :picture, :job_title, :description, :facebook_url, :twitter_url, :linkedin_url, :password, :password_confirmation, :role)
   end
 
   def needs_password?(user, params)

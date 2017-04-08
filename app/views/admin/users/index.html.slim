@@ -21,6 +21,10 @@
                     th = t('user.last_name')
                     th = t('user.picture')
                     th = t('user.job_title')
+                    th = t('user.description')
+                    th = t('user.facebook_url')
+                    th = t('user.twitter_url')
+                    th = t('user.linkedin_url')
                     th = t('user.role')
                     th = t('user.sign_in_count')
                     th = t('user.last_sign_in')
@@ -37,6 +41,10 @@
                       td = user.last_name
                       td = image_tag user.picture.url(:medium), class: 'img-responsive'
                       td = user.job_title
+                      td = user.description
+                      td = user.facebook_url
+                      td = user.twitter_url
+                      td = user.linkedin_url
                       td = user.role_text
                       td = user.sign_in_count
                       td
