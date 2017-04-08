@@ -53,6 +53,7 @@ vi:
         job_title: 'Nghề nghiệp'
         sign_in_count: 'Lượt truy cập'
         last_sign_in: 'Lần cuối truy cập'
+        picture: 'Hình đại diện'
       category:
         name: 'Tên thư mục'
       contract:
@@ -161,6 +162,7 @@ vi:
     sign_in_count: 'Lượt truy cập'
     last_sign_in: 'Lần cuối truy cập'
     never_logged_in: 'Chưa đăng nhập'
+    picture: 'Hình đại diện'
   contract:
     show:
       heading: 'Hợp đồng'
@@ -234,6 +236,7 @@ vi:
         role: 'Vai trò'
         password: 'Mật khẩu'
         password_confirmation: 'Nhập lại mật khẩu'
+        picture: 'Hình đại diện'
       category:
         name: 'Tên thư mục'
       contract:

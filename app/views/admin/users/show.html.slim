@@ -25,6 +25,9 @@
                 th = t('user.last_name')
                 td = @user.last_name
               tr
+                th = t('user.picture')
+                td = image_tag @user.picture.url(:medium), class: 'img-responsive'
+              tr
                 th = t('user.job_title')
                 td = @user.job_title
               tr
