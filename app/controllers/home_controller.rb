@@ -4,8 +4,8 @@ class HomeController < ApplicationController
   def index
     @posts = Post.order(created_at: :asc).limit(5)
     @services = Service.all
-    @major_services = @services[0..2]
-    @minor_services = @services[3..-1]
+    @major_services = @services[0..3]
+    @minor_services = @services[4..-1]
     @employees = User.where.not(role: :admin)
   end
 

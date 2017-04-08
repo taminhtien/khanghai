@@ -1,4 +1,21 @@
 vi:
+  enumerize:
+    contract:
+      type:
+        civil: 'Dân sự'
+        criminal: 'Hình sự'
+        land: 'Đất đai'
+        administration: 'Hành chính'
+        labor: 'Lao động'
+        others: 'Khác'
+    user:
+      role:
+        admin: 'Quản trị viên'
+        staff: 'Nhân viên công ty'
+      salutation:
+        mr: 'Ông'
+        mrs: 'Bà'
+        ms: 'Cô'
   active_record:
     attributes:
       customer:
@@ -26,7 +43,7 @@ vi:
         email: 'Email'
         phone_number: 'Số điện thoại'
         subject: 'Chủ đề'
-        message: 'Tin nhắn'
+        message: 'Nội dung'
       user:
         email: 'Email'
         salutation: 'Danh xưng'
@@ -124,17 +141,17 @@ vi:
     email: 'Email'
     phone_number: 'Số điện thoại'
     subject: 'Chủ đề'
-    message: 'Tin nhắn'
+    message: 'Nội dung'
   user:
     show:
-      heading: 'Người dùng'
+      heading: 'Nhân sự'
     index:
-      heading: 'Danh sách người dùng'
-      create: 'Tạo người dùng mới'
+      heading: 'Danh sách nhân sự'
+      create: 'Tạo nhân viên mới'
     new:
-      heading: 'Tạo người dùng'
+      heading: 'Tạo nhân viên mới'
     edit:
-      heading: 'Sửa thông tin người dùng'
+      heading: 'Sửa thông tin nhân viên'
     email: 'Email'
     salutation: 'Danh xưng'
     first_name: 'Tên'
@@ -205,7 +222,7 @@ vi:
         email: 'Email'
         phone_number: 'Số điện thoại'
         subject: 'Chủ đề'
-        message: 'Tin nhắn'
+        message: 'Nội dung'
       user:
         email: 'Email'
         salutation: 'Danh xưng'
@@ -242,16 +259,28 @@ vi:
           staff: 'Nhân viên công ty'
   admin:
     menu:
-      customers: 'Khách hàng'
-      services: 'Dịch vụ'
-      posts: 'Bài viết'
-      users: 'Người dùng'
-      categories: 'Thư mục'
-      contacts: 'Liên hệ'
-      contracts: 'Hợp đồng'
+      customers: 'Quản lý khách hàng'
+      services: 'Quản lý dịch vụ'
+      posts: 'Quản lý bài viết'
+      users: 'Quản lý nhân sự'
+      categories: 'Quản lý thư mục'
+      contacts: 'Quản lý liên hệ'
+      contracts: ' Quản lý hợp đồng'
   home_page:
+    statistics:
+      trusted_clients: 'Khách hàng tin tưởng'
+      recovered_for_our_clients: 'Thu hồi cho khách hàng'
+      successful_cases: 'Hợp đồng thành công'
     the_news: 'Tin tức'
     important_clients: 'Khách hàng'
+    internship:
+      title: 'Bạn muốn thực tập tại công ty chúng tôi?'
+      subtitle: 'Hãy liên hệ chúng tôi ngay'
+    team:
+      title: 'Đội ngũ'
+      subtitle: 'Từ nhóm Luật sư công tác tại Phòng Pháp chế Cảng Sài Gòn, năm 2012 chúng tôi tự tin thành lập Khang Hai & Partners. Kể từ khi thành lập tới nay, với tiềm năng sẵn có về sự nhiệt huyết, sáng tạo của đội ngũ luật sư, cộng sự và sự nhạy bén, dày dạn kinh nghiệm từ Ban Lãnh đạo, Khang Hai & Partners đã không ngừng nỗ lực phấn đấu, đổi mới, ngày một lớn mạnh với từng bước đi vững chắc, gây dựng niềm tin ở các nhà đầu tư và tạo sự tín nhiệm đối với khách hàng.'
+    contact: 'Liên hệ'
+    read_more: 'Chi tiết'
     header:
       company_name: 'Công ty Luật Khang Hải'
       working_hour: 'Thứ 2 - Thứ 7: 7:00 - 17:00'

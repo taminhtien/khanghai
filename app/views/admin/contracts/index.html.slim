@@ -32,13 +32,13 @@
                       td = contract.id
                       td = contract.code
                       td = link_to contract.customer.try(&:name), [:admin, contract.customer]
-                      td = contract.type
+                      td = contract.type_text
                       td = contract.assignee
                       td = format_datetime(contract.assigned_date)
                       td = format_datetime(contract.estimate_completed_date)
-                      td = contract.summary
-                      td = contract.requirement
-                      td = contract.development
+                      td == contract.summary
+                      td == contract.requirement
+                      td == contract.development
                       td = contract.propose_assignee
                       td
                         ul.list-inline

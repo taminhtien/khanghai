@@ -3,11 +3,11 @@
     .row
       .col-md-3
         .widget
-          h3.title Đội ngũ
-          p.subtitle Từ nhóm Luật sư công tác tại Phòng Pháp chế Cảng Sài Gòn, năm 2012 chúng tôi tự tin thành lập Khang Hai & Partners. Kể từ khi thành lập tới nay, với tiềm năng sẵn có về sự nhiệt huyết, sáng tạo của đội ngũ luật sư, cộng sự và sự nhạy bén, dày dạn kinh nghiệm từ Ban Lãnh đạo, Khang Hai & Partners đã không ngừng nỗ lực phấn đấu, đổi mới, ngày một lớn mạnh với từng bước đi vững chắc, gây dựng niềm tin ở các nhà đầu tư và tạo sự tín nhiệm đối với khách hàng.
+          h3.title = t('home_page.team.title')
+          p.subtitle = t('home_page.team.subtitle')
           p
             = link_to about_us_path, class: 'read-more' do
-              = fa_icon "long-arrow-right", text: 'Read more', right: true
+              = fa_icon "long-arrow-right", text: t('home_page.read_more'), right: true
 
       - @employees.each do |employee|
         .col-md-3

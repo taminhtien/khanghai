@@ -1,18 +1,10 @@
 .home-introduction-container
   .container
     .row
-      .col-md-4
-        .widget
-          h3.title We are London based law firm focused on excellence.
-          p.subtitle Headed by one of the most distinguished and experienced lawyers in the country, George Hilton, our firm have a sound base in the law fraternity, and we aim to put our resources to effective use for the success of our clients. Backed by hundreds of successful cases in different fields of law, and having being the preferred law firm for many Fortune 500 companies, you can rest assured that your case is in safe hands with us.
-          p
-            = link_to about_us_path, class: 'read-more' do
-              = fa_icon "long-arrow-right", text: 'Read more', right: true
-
-      .col-md-8
+      .col-md-12
         .row
           - @major_services.each do |service|
-            .col-md-4
+            .col-md-3
               .service-wrapper
                 = link_to (image_tag service.picture.url(:thumb), class: 'img-responsive'), service
                 .content

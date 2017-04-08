@@ -17,7 +17,7 @@
                 td = link_to @contract.customer.name, [:admin, @contract.customer]
               tr
                 th = t('contract.type')
-                td = @contract.type
+                td = @contract.type_text
               tr
                 th = t('contract.assignee')
                 td = @contract.assignee
@@ -29,13 +29,13 @@
                 td = format_datetime(@contract.estimate_completed_date)
               tr
                 th = t('contracnt.summary')
-                td = @contract.summary
+                td == @contract.summary
               tr
                 th = t('contract.requirement')
-                td = @contract.requirement
+                td == @contract.requirement
               tr
-                th = t('contract.development')
-                td = @contract.development
+                th == t('contract.development')
+                td == @contract.development
               tr
                 th = t('contract.propose_assignee')
                 td = @contract.propose_assignee

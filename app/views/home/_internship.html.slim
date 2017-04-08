@@ -2,8 +2,8 @@
   .container
     .call-to-action
       .text
-        .title Bạn muốn thực tập ở công ty chúng tôi?
-        .subtitle Hãy liên hệ chúng tôi ngay
+        .title = t('home_page.internship.title')
+        .subtitle = t('home_page.internship.subtitle')
       .buttons
-        = link_to 'Liên hệ', '#', class: 'btn btn-raised btn-primary btn-apply-now'
-        = link_to 'Xem thêm', '#', class: 'btn btn-raised btn-default'
+        = link_to t('home_page.contact'), new_contact_path, class: 'btn btn-raised btn-primary btn-apply-now'
+        = link_to t('home_page.read_more'), '#', class: 'btn btn-raised btn-default'

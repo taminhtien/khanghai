@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
                                  default_url:  'users/picture/:style/missing.png'
 
   enumerize :role, in: [:admin, :staff]
-  enumerize :salutation, in: [:mr, :mrs, :miss, :ms], default: :mr
+  enumerize :salutation, in: [:mr, :mrs, :ms], default: :mr
 
   validates_attachment :picture, content_type: { content_type: /\Aimage\/.*\Z/ },
                                  size:         { less_than: 5.megabyte }
