@@ -38,6 +38,20 @@ vi:
         last_sign_in: 'Lần cuối truy cập'
       category:
         name: 'Tên thư mục'
+      contract:
+        code: 'Mã hợp đồng'
+        customer: 'Khách hàng'
+        first_name: 'Tên'
+        last_name: 'Họ'
+        role: 'Vai trò'
+        assigned_date: 'Ngày chỉ định'
+        assignee: 'Người được chỉ định'
+        assignee_date: 'Ngày tạo chỉ định'
+        estimate_completed_date: 'Ngày hoàn thành dự tính'
+        summary: 'Tổng quan'
+        requirement: 'Yêu cầu của khách'
+        development: 'Diễn biến vụ việc'
+        propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
   customer:
     show:
       heading: 'Khách hàng'
@@ -148,11 +162,12 @@ vi:
     assigned_date: 'Ngày chỉ định'
     assignee: 'Người được chỉ định'
     assignee_date: 'Ngày tạo chỉ định'
-    estimate_completed_date: 'Dự đoán ngày hoàn thành'
+    estimate_completed_date: 'Ngày hoàn thành tự tính'
     summary: 'Tổng quan'
     requirement: 'Yêu cầu của khách'
     development: 'Diễn biến vụ việc'
     propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
+    type: 'Loại hợp đồng'
   shared:
     action: 'Hành động'
     show: 'Xem'
@@ -204,6 +219,22 @@ vi:
         password_confirmation: 'Nhập lại mật khẩu'
       category:
         name: 'Tên thư mục'
+      contract:
+        code: 'Mã hợp đồng'
+        customer: 'Khách hàng'
+        customer_id: 'Khách hàng'
+        first_name: 'Tên'
+        last_name: 'Họ'
+        role: 'Vai trò'
+        type: 'Loại hợp đồng'
+        assigned_date: 'Ngày chỉ định'
+        assignee: 'Người được chỉ định'
+        assignee_date: 'Ngày tạo chỉ định'
+        estimate_completed_date: 'Ngày hoàn thành dự tính'
+        summary: 'Tổng quan'
+        requirement: 'Yêu cầu của khách'
+        development: 'Diễn biến vụ việc'
+        propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
     options:
       user:
         role:
@@ -219,6 +250,8 @@ vi:
       contacts: 'Liên hệ'
       contracts: 'Hợp đồng'
   home_page:
+    the_news: 'Tin tức'
+    important_clients: 'Khách hàng'
     header:
       company_name: 'Công ty Luật Khang Hải'
       working_hour: 'Thứ 2 - Thứ 7: 7:00 - 17:00'

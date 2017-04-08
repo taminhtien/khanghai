@@ -34,8 +34,8 @@
                       td = contact.phone_number
                       td = contact.subject
                       td = contact.message
-                      td = contact.created_at
-                      td = contact.updated_at
+                      td = format_datetime(contact.created_at)
+                      td = format_datetime(contact.updated_at)
                       td
                         ul.list-inline
                           li = link_to t('shared.show'), [:admin, contact]

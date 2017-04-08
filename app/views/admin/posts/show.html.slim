@@ -33,10 +33,10 @@
                   td = @post.slug
                 tr
                   th = t('shared.created_at')
-                  td = @post.created_at
+                  td = format_datetime(@post.created_at)
                 tr
                   th = t('shared.updated_at')
-                  td = @post.updated_at
+                  td = format_datetime(@post.updated_at)
 
             .pull-right
               .btn-group

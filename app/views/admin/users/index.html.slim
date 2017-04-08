@@ -42,8 +42,8 @@
                           = t('user.never_logged_in')
                         - else
                           = time_ago_in_words(user.last_sign_in_at.to_datetime) + ' ago'
-                      td = user.created_at
-                      td = user.updated_at
+                      td = format_datetime(user.created_at)
+                      td = format_datetime(user.updated_at)
                       td
                         ul.list-inline
                           li = link_to t('shared.show'), [:admin, user]

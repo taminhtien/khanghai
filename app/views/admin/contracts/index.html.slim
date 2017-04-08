@@ -34,8 +34,8 @@
                       td = link_to contract.customer.try(&:name), [:admin, contract.customer]
                       td = contract.type
                       td = contract.assignee
-                      td = contract.assigned_date
-                      td = contract.estimate_completed_date
+                      td = format_datetime(contract.assigned_date)
+                      td = format_datetime(contract.estimate_completed_date)
                       td = contract.summary
                       td = contract.requirement
                       td = contract.development

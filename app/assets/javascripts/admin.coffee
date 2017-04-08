@@ -4,5 +4,7 @@
 #= require sb-admin-2.min
 #= require metisMenu.min
 #= require bootstrap-confirmation.min
+#= require ckeditor/init
+#= require bootstrap-datepicker
 #= require utils
 #= require global

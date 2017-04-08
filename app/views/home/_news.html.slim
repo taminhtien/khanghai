@@ -4,19 +4,20 @@
       .col-md-12
         .widget-title--big
           h3.widget-title
-            span.widget-title__inline The News
+            span.widget-title__inline = t('home_page.the_news')
             span.widget-title__line
       .col-md-12
         .row
           = render partial: 'new', locals: { post: @posts[0] }
-          = render partial: 'new', locals: { post: @posts[1] }
+          = render partial: 'new', locals: { post: @posts[1] } if @posts[1]
 
           .col-md-4
             .latest-news__container
-              - @posts[2..-1].each do |post|
-                = link_to post, class: 'latest-news latest-news--inline' do
-                  .latest-news__content
-                    h4.latest-news__title = post.title
-                    .latest-news__full-date = format_datetime(post.created_at)
+              - if @posts.length > 2
+                - @posts[2..-1].each do |post|
+                  = link_to post, class: 'latest-news latest-news--inline' do
+                    .latest-news__content
+                      h4.latest-news__title = post.title
+                      .latest-news__full-date = format_datetime(post.created_at)
 
-              = link_to 'More news', posts_path, class: 'latest-news latest-news--more-news'
+                = link_to 'More news', posts_path, class: 'latest-news latest-news--more-news'

@@ -1,42 +1,46 @@
 .row
   .col-lg-12
-    h1.page-header Contract
+    h1.page-header = t('contract.show.heading')
 .row
   .col-lg-12
     .panel.panel-default
-      .panel-heading Contract
+      .panel-heading = t('contract.show.heading')
       .panel-body
         .row
           .col-lg-12
             table.table
               tr
-                th = Contract.human_attribute_name(:code)
+                th = t('contract.code')
                 td = @contract.code
               tr
-                th = Contract.human_attribute_name(:customer)
-                td
-                  = link_to @contract.customer.name, [:admin, @contract.customer]
+                th = t('contract.customer')
+                td = link_to @contract.customer.name, [:admin, @contract.customer]
               tr
-                th = Contract.human_attribute_name(:type)
+                th = t('contract.type')
                 td = @contract.type
               tr
-                th = Contract.human_attribute_name(:assignee)
+                th = t('contract.assignee')
                 td = @contract.assignee
               tr
-                th = Contract.human_attribute_name(:assigned_date)
-                td = @contract.assigned_date
+                th = t('contract.assigned_date')
+                td = format_datetime(@contract.assigned_date)
               tr
-                th = Contract.human_attribute_name(:estimate_completed_date)
-                td = @contract.estimate_completed_date
+                th = t('contract.estimate_completed_date')
+                td = format_datetime(@contract.estimate_completed_date)
               tr
-                th = Contract.human_attribute_name(:summary)
+                th = t('contracnt.summary')
                 td = @contract.summary
               tr
-                th = Contract.human_attribute_name(:requirement)
+                th = t('contract.requirement')
                 td = @contract.requirement
               tr
-                th = Contract.human_attribute_name(:development)
+                th = t('contract.development')
                 td = @contract.development
               tr
-                th = Contract.human_attribute_name(:propose_assignee)
+                th = t('contract.propose_assignee')
                 td = @contract.propose_assignee
+
+            .pull-right
+              .btn-group
+                = link_to t('shared.edit'), edit_admin_contract_path(@contract), class: 'btn btn-default'
+                = link_to t('shared.delete'), admin_contract_path(@contract), method: :delete, data: { confirm: t('shared.confirm_delete') }, class: 'btn btn-default'

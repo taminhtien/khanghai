@@ -34,8 +34,8 @@
                       td = link_to post.user.name, admin_user_path(post.user)
                       td = post.content
                       td = post.slug
-                      td = post.created_at
-                      td = post.updated_at
+                      td = format_datetime(post.created_at)
+                      td = format_datetime(post.updated_at)
                       td
                         ul.list-inline
                           li = link_to t('shared.show'), [:admin, post]

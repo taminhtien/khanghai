@@ -42,7 +42,7 @@
                     = time_ago_in_words(@user.last_sign_in_at.to_datetime) + t('shared.ago')
               tr
                 th = t('shared.created_at')
-                td = @user.created_at
+                td = format_datetime(@user.created_at)
               tr
                 th = t('shared.updated_at')
                 td = @user.updated_at

@@ -17,10 +17,10 @@
                 td = @category.name
               tr
                 th = t('shared.created_at')
-                td = @category.created_at
+                td = format_datetime(@category.created_at)
               tr
                 th = t('shared.updated_at')
-                td = @category.updated_at
+                td = format_datetime(@category.updated_at)
 
             .pull-right
               .btn-group

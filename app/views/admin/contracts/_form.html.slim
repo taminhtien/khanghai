@@ -3,10 +3,10 @@
   = f.input :customer_id, as: :select, collection: Customer.order(:name)
   = f.input :type, as: :select
   = f.input :assignee
-  = f.input :assigned_date
-  = f.input :estimate_completed_date
-  = f.input :summary
-  = f.input :requirement
-  = f.input :development
+  = f.input :assigned_date, as: :string, input_html: { class: 'date_picker' }
+  = f.input :estimate_completed_date, as: :string, input_html: { class: 'date_picker' }
+  = f.input :summary, as: :ckeditor
+  = f.input :requirement, as: :ckeditor
+  = f.input :development, as: :ckeditor
   = f.input :propose_assignee
   = f.submit 'Submit', class: 'btn btn-default'

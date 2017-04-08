@@ -30,8 +30,8 @@
                       td == service.content
                       td = image_tag service.picture.url, class: 'img-responsive'
                       td = service.slug
-                      td = service.created_at
-                      td = service.updated_at
+                      td = format_datetime(service.created_at)
+                      td = format_datetime(service.updated_at)
                       td
                         ul.list-inline
                           li = link_to t('shared.show'), [:admin, service]

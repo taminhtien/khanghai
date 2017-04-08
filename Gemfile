@@ -32,6 +32,7 @@ gem 'rails-i18n'
 gem 'enumerize'
 gem 'mina', '~> 0.3.8'
 gem 'rails_utils'
+gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
   gem 'rspec-rails'

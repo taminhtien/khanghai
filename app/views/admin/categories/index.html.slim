@@ -24,8 +24,8 @@
                     tr
                       td = category.id
                       td = category.name
-                      td = category.created_at
-                      td = category.updated_at
+                      td = format_datetime(category.created_at)
+                      td = format_datetime(category.updated_at)
                       td
                         ul.list-inline
                           li = link_to t('shared.show'), [:admin, category]

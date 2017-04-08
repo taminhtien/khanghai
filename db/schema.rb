@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402100731) do
+ActiveRecord::Schema.define(version: 20170408041939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,9 +72,9 @@ ActiveRecord::Schema.define(version: 20170402100731) do
     t.string   "permanent_address"
     t.string   "contact_address"
     t.string   "phone_number"
-    t.datetime "birthday"
     t.datetime "created_at",        default: '2017-04-01 15:38:45'
     t.datetime "updated_at",        default: '2017-04-01 15:38:45'
+    t.integer  "birthday"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

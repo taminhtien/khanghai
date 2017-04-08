@@ -1,6 +1,7 @@
 const Utils = {
   init: () => {
-    Utils.initConfirmation()
+    Utils.initConfirmation(),
+    Utils.initDatePicker()
   },
   initConfirmation: () => {
     $('[data-toggle="confirmation"]').each(function() {
@@ -18,5 +19,8 @@ const Utils = {
         }
       })
     })
+  },
+  initDatePicker:() => {
+    $('input.date_picker').datepicker({format: 'yyyy-mm-dd', autoclose: true})
   }
 }

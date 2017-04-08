@@ -32,7 +32,7 @@
                 td = @contact.message
               tr
                 th = t('shared.created_at')
-                td = @contact.created_at
+                td = format_datetime(@contact.created_at)
               tr
                 th = t('shared.updated_at')
                 td = @contact.updated_at

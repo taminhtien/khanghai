@@ -8,8 +8,6 @@
       .panel-body
         .row
           .col-lg-12
-            = link_to t('category.index.create'), new_admin_category_path, class: 'btn btn-default'
-            
             .table-responsive
               table.table
                 tr
@@ -32,10 +30,10 @@
                   td = @service.slug
                 tr
                   th = t('shared.created_at')
-                  td = @service.created_at
+                  td = format_datetime(@service.created_at)
                 tr
                   th = t('shared.updated_at')
-                  td = @service.updated_at
+                  td = format_datetime(@service.updated_at)
 
             .pull-right
               .btn-group
