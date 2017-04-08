@@ -7,6 +7,15 @@ body {
   line-height: 1.57;
 }
 
+a {
+  color: $tan;
+  text-decoration: none;
+
+  &:hover {
+    color: $darkder-putty;
+  }
+}
+
 .btn {
   border: 1px solid transparent;
   border-radius: 2px;
@@ -78,11 +87,6 @@ h6 {
 
 p {
   margin: 0 0 10.5px;
-}
-
-a {
-  color: $tan;
-  text-decoration: none;
 }
 
 .widget {

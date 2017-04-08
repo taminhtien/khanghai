@@ -8,5 +8,5 @@
               .icon-box
                 = fa_icon 'university'
                 .content
-                  h4.title = service.title
-                  span.subtitle == service.content.truncate(100)
+                  h4.title = link_to service.title, service
+                  span.subtitle = service.short_description
