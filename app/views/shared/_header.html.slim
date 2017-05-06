@@ -21,23 +21,23 @@
 
   .container
     .header
-      .header__left-widgets
-        .widget.widget-icon-box
-          .icon-box
-            = fa_icon 'phone-square'
-            .icon-box__text
-              h4.icon-box__title = t('home_page.header.hotline')
-              span.icon-box__subtitle = t('home_page.header.hotline_subtitle')
+      / .header__left-widgets
+        / .widget.widget-icon-box
+        /   .icon-box
+        /     = fa_icon 'phone-square'
+        /     .icon-box__text
+        /       h4.icon-box__title = t('home_page.header.hotline')
+        /       span.icon-box__subtitle = t('home_page.header.hotline_subtitle')
 
-        .widget.widget-icon-box
-          .icon-box
-            = fa_icon 'headphones'
-            .icon-box__text
-              h4.icon-box__title = t('home_page.header.office_phone_number')
-              span.icon-box__subtitle = t('home_page.header.office_phone_number_subtitle')
+        / .widget.widget-icon-box
+        /   .icon-box
+        /     = fa_icon 'headphones'
+        /     .icon-box__text
+        /       h4.icon-box__title = t('home_page.header.office_phone_number')
+        /       span.icon-box__subtitle = t('home_page.header.office_phone_number_subtitle')
 
       .header__logo
-        = link_to (image_tag 'logo.jpg'), root_url
+        = link_to (image_tag 'logo.png'), root_url
         button.navbar-toggle type='button' data-toggle='collapse' data-target='#legalpress-navbar-collapse'
           span.navbar-toggle__text MENU
           span.navbar-toggle__icon-bar
@@ -45,21 +45,22 @@
             span.icon-bar
             span.icon-bar
 
-      .header__right-widgets
-        .widget.widget_text
-          .textwidget
-            = link_to "#{t('home_page.header.free_consultant')}", contact_us_path, class: 'btn btn-raised btn-primary'
+      / .header__right-widgets
+      /   .widget.widget_text
+      /     .textwidget
+      /       = link_to "#{t('home_page.header.free_consultant')}", contact_us_path, class: 'btn btn-raised btn-primary'
 
       .header__navigation
         nav.collapse.navbar-collapse aria-label='Main Menu' id='legalpress-navbar-collapse'
           ul#menu-main-menu class='main-navigation js-main-nav' role='menubar'
             li = active_link_to "#{t('home_page.header.home')}", root_url, active: :exact
+            li = active_link_to "#{t('home_page.header.about_us')}", about_us_path, active: :exact
             li.has-children
               = link_to "#{t('home_page.header.service')}", services_path
               ul.sub-menu
                 - Service.all.each do |service|
                   li = link_to service.title, service
-                
-            li = active_link_to "#{t('home_page.header.about_us')}", about_us_path, active: :exact
             li = active_link_to "#{t('home_page.header.news')}", posts_path, active: :exact
+            li = active_link_to "#{t('home_page.header.documents')}", '#', active: :exact
+            li = active_link_to "#{t('home_page.header.qa')}", '#', active: :exact
             li = active_link_to "#{t('home_page.header.contact_us')}", contact_us_path, active: :exact

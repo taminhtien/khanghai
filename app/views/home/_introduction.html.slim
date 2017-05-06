@@ -1,12 +1,12 @@
-.home-introduction-container
-  .container
-    .row
-      .col-md-12
-        .row
-          - @major_services.each do |service|
-            .col-md-3
-              .service-wrapper
-                = link_to (image_tag service.picture.url(:thumb), class: 'img-responsive'), service
-                .content
-                  h5.title = link_to service.title, service
-                  p = service.short_description
+/ .home-introduction-container
+/   .container
+/     .row
+/       .col-md-12
+/         .row
+/           - @major_services.each do |service|
+/             .col-md-3
+/               .service-wrapper
+/                 = link_to (image_tag service.picture.url(:thumb), class: 'img-responsive'), service
+/                 .content
+/                   h5.title = link_to service.title, service
+/                   p = service.short_description

@@ -8,11 +8,11 @@ body {
 }
 
 a {
-  color: $tan;
+  color: #000;
   text-decoration: none;
 
   &:hover {
-    color: $darkder-putty;
+    color: #000;
   }
 }
 
@@ -91,7 +91,7 @@ p {
 
 .widget {
   .title {
-    font-size: 36px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 25px;
