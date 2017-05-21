@@ -11,11 +11,12 @@
           = render partial: 'form', locals: { form: @forms[1] } if @forms[1]
 
           .col-md-4
-            / .latest-news__container
-            / - @forms.each do |form|
-            /   = link_to '#', class: 'latest-news latest-news--inline' do
-            /     .latest-news__content
-            /       h4.latest-news__title = form.title
-            /       .latest-news__full-date = format_datetime(form.created_at)
+            .latest-news__container
+              - if @forms.length >= 2
+                - @forms[2..-1].each do |form|
+                  = link_to '#', class: 'latest-news latest-news--inline' do
+                    .latest-news__content
+                      h4.latest-news__title = form.title.truncate(50)
+                      .latest-news__full-date = format_datetime(form.created_at)
 
-            / = link_to 'More news', forms_path, class: 'latest-news latest-news--more-news'
+                = link_to 'Xem thêm', forms_path, class: 'latest-news latest-news--more-news'

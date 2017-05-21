@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   
   resources :categories, only: [:show] do
     resources :posts, only: [:index]
+    resources :forms, only: [:index]
   end
 
   namespace :admin do

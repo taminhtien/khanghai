@@ -18,13 +18,8 @@ html
         
         .col-xs-12.col-md-3
           .sidebar role='complementary'
-          
-            - if User.find_by_role(:ceo)
-              .widget.widget-person-profile
-                = render partial: 'shared/employee', locals: { employee: User.find_by_role(:ceo) }
-            
             .widget.widget_search
-              = form_tag '/posts', method: :get do
+              = form_tag '/forms', method: :get do
                 label
                   = search_field_tag :q, nil, placeholder: t('layouts.posts.search_placeholder'), class: 'search-field'
 
@@ -35,9 +30,9 @@ html
             .widget.widget_categories
               h4.sidebar__headings = t('layouts.posts.category_heading')
               ul
-                - PostCategory.all.each do |category|
+                - FormCategory.all.each do |category|
                   li
-                    = link_to category.name, category_posts_path(category)
+                    = link_to category.name, category_forms_path(category)
 
             .widget
               h4.sidebar__headings Facebook

@@ -1,13 +1,12 @@
 class FormsController < ApplicationController
-  layout 'posts'
+  layout 'forms'
   before_action :set_form, only: [:show]
 
   def index
-    #@ceo = User.find_by_role(:ceo)  
-    @forms = Form.all.paginate(page: params[:page], per_page: 10)
-    #@posts = @posts.where(category_id: params[:category_id]) if params[:category_id].present?
-    #@posts = @posts.where('title ILIKE ?', "%#{params[:q]}%") if params[:q].present?
-    #@posts = @posts.paginate(page: params[:page], per_page: 10)
+    @forms = Form.all
+    @forms = @forms.where(category_id: params[:category_id]) if params[:category_id].present?
+    @forms = @forms.where('title ILIKE ?', "%#{params[:q]}%") if params[:q].present?
+    @forms = @forms.paginate(page: params[:page], per_page: 10)
   end
 
   def show; end

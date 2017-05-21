@@ -54,24 +54,6 @@
   }
 
   #contact-form {
-    input[type=text], input[type=email], input[type=tel], textarea {
-      background-color: #f7f7f7;
-      border-radius: 2px;
-      border: 1px solid #eee;
-      box-shadow: none;
-      width: 100%;
-      padding: 17.5px 20px;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #999;
-      transition: all 100ms ease-out;
-
-      &:focus {
-        outline: -webkit-focus-ring-color auto 5px;
-        background-color: #fff;
-      }
-    }
-
     textarea {
       height: 220px;
     }

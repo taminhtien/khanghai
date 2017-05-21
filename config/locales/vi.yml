@@ -313,6 +313,13 @@ vi:
       contacts: 'Quản lý liên hệ'
       contracts: 'Quản lý hợp đồng'
       forms: 'Quản lý biểu mẫu'
+  breadcrumbs:
+    index: 'Trang chủ'
+    forms: 'Biểu mẫu'
+  layouts:
+    posts:
+      category_heading: 'Thư mục'
+      search_placeholder: 'Tìm kiếm'
   home_page:
     statistics:
       trusted_clients: 'Khách hàng tin tưởng'

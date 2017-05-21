@@ -3,5 +3,5 @@
     .latest-new
       .latest-new__content
         h4.latest-new__title
-          = link_to form.title, form
-        .latest-news__excerpt == form.content.truncate(200)
+          = link_to form.title.truncate(100), form
+        .latest-news__excerpt == form.content.truncate(100)

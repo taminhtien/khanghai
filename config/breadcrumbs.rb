@@ -1,5 +1,5 @@
 crumb :root do
-  link 'Khang Hai', root_path
+  link t('breadcrumbs.index'), root_path
 end
 
 crumb :services do
@@ -11,7 +11,7 @@ crumb :posts do
 end
 
 crumb :forms do
-  link 'Form Applications', forms_path
+  link t('breadcrumbs.forms'), forms_path
 end
 
 crumb :about_us do
@@ -28,11 +28,11 @@ crumb :service do |service|
 end
 
 crumb :post do |post|
-  link post.title, post
+  link post.title.truncate(100), post
   parent :posts
 end
 
 crumb :form do |form|
-  link form.title, form
+  link form.title.truncate(100), form
   parent :forms
 end

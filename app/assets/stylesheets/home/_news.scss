@@ -1,16 +1,6 @@
 .home-news-container {
   margin-bottom: 56px;
 
-  a {
-    color: $grape;
-    transition: all 100ms ease-out;
-
-    &:hover {
-      color: $tan;
-      text-decoration: none;
-    }
-  }
-
   .latest-news {
     border-top: 1px solid $lightest-white;
     position: relative;
@@ -41,10 +31,6 @@
     margin-bottom: 14px;
     margin-top: 0;
     transition: all 100ms ease-out;
-
-    &:hover {
-      color: $tan;
-    }
   }
 
   .latest-news__full-date {
@@ -53,7 +39,6 @@
 
   .latest-news--more-news {
     background-color: $white;
-    color: $tan;
     display: block;
     font-weight: bold;
     padding: 18px 30px;
@@ -66,7 +51,6 @@
     }
 
     &:after {
-      color: $tan;
       content: '\f178';
       font-family: 'FontAwesome';
       position: absolute;

@@ -7,7 +7,7 @@
           span.meta-data__separator |
           span.meta-data__categories = form.form_category.name
       h2.title
-        = link_to form.title, form
+        = link_to form.title.truncate(100), form
     .entry-content
       == form.content.truncate(400)
       p = link_to 'Read more', form, class: 'more-link'
