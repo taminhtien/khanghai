@@ -19,7 +19,7 @@ class Admin::CategoriesController < Admin::BaseController
     @category = Category.new(category_params)
 
     if @category.save
-      redirect_to [:admin, @category], notice: 'Category was successfully created.'
+      redirect_to [:admin, @category.becomes(Category)], notice: 'Category was successfully created.'
     else
       render :new
     end
@@ -27,7 +27,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def update
     if @category.update(category_params)
-      redirect_to [:admin, @category], notice: 'Category was successfully updated.'
+      redirect_to [:admin, @category.becomes(Category)], notice: 'Category was successfully updated.'
     else
       render :edit
     end
@@ -45,6 +45,6 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def category_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:name, :type)
   end
 end

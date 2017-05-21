@@ -1,0 +1,7 @@
+.home-form-container
+  .col-md-4
+    .latest-new
+      .latest-new__content
+        h4.latest-new__title
+          = link_to form.title, form
+        .latest-news__excerpt == form.content.truncate(200)

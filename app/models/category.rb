@@ -1,5 +1,7 @@
 class Category < ActiveRecord::Base
-  has_many  :posts, dependent: :destroy
+  extend Enumerize
+
+  enumerize :type, in: [:PostCategory, :FormCategory]
 
   validates :name,  presence: true
 end

@@ -1,5 +1,9 @@
 vi:
   enumerize:
+    category:
+      type:
+        PostCategory: 'Bài viết'
+        FormCategory: 'Biểu mẫu'
     contract:
       type:
         civil: 'Dân sự'
@@ -36,6 +40,12 @@ vi:
         user_id: 'Tác giả'
         content: 'Nội dung'
         picture: 'Ảnh minh họa'
+        slug: 'Đường dẫn URL'
+      form:
+        title: 'Tiêu đề'
+        category_id: 'Thư mục'
+        content: 'Nội dung'
+        form: 'Tệp đính kèm'
         slug: 'Đường dẫn URL'
       contact:
         first_name: 'Tên'
@@ -195,6 +205,21 @@ vi:
     development: 'Diễn biến vụ việc'
     propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
     type: 'Loại hợp đồng'
+  form:
+    show:
+      heading: 'Biểu mẫu'
+    index:
+      heading: 'Biểu mẫu'
+      create: 'Tạo biểu mẫu mới'
+    new:
+      heading: 'Tạo biểu mẫu'
+    edit:
+      heading: 'Sửa thông tin biểu mẫu'
+    title: 'Tiêu đề'
+    category: 'Thư mục'
+    form: 'Tệp đính kèm'
+    content: 'Nội dung'
+    slug: 'Đường dẫn URL'
   shared:
     action: 'Hành động'
     show: 'Xem'
@@ -267,6 +292,12 @@ vi:
         requirement: 'Yêu cầu của khách'
         development: 'Diễn biến vụ việc'
         propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
+      form:
+        title: 'Tiêu đề'
+        category_id: 'Thư mục'
+        content: 'Nội dung'
+        form: 'Tệp đính kèm'
+        slug: 'Đường dẫn URL'
     options:
       user:
         role:
@@ -280,13 +311,15 @@ vi:
       users: 'Quản lý nhân sự'
       categories: 'Quản lý thư mục'
       contacts: 'Quản lý liên hệ'
-      contracts: ' Quản lý hợp đồng'
+      contracts: 'Quản lý hợp đồng'
+      forms: 'Quản lý biểu mẫu'
   home_page:
     statistics:
       trusted_clients: 'Khách hàng tin tưởng'
       recovered_for_our_clients: 'Thu hồi cho khách hàng'
       successful_cases: 'Hợp đồng thành công'
-    the_news: 'Tin tức'
+    the_news: 'Tin tức và sự kiện'
+    forms: 'Biểu mẫu'
     important_clients: 'Khách hàng'
     internship:
       title: 'Bạn muốn thực tập tại công ty chúng tôi?'

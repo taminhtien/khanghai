@@ -16,6 +16,7 @@
                   tr
                     th ID
                     th = t('category.name')
+                    th = t('category.type')
                     th = t('shared.created_at')
                     th = t('shared.updated_at')
                     th = t('shared.action')
@@ -24,13 +25,14 @@
                     tr
                       td = category.id
                       td = category.name
+                      td = category.type_text
                       td = format_datetime(category.created_at)
                       td = format_datetime(category.updated_at)
                       td
                         ul.list-inline
-                          li = link_to t('shared.show'), [:admin, category]
-                          li = link_to t('shared.edit'), [:edit, :admin, category]
-                          li = link_to t('shared.delete'), admin_category_path(category), method: :delete, data: { confirm: t('shared.confirm_delete') } 
+                          li = link_to t('shared.show'), [:admin, category.becomes(Category)]
+                          li = link_to t('shared.edit'), [:edit, :admin, category.becomes(Category)]
+                          li = link_to t('shared.delete'), admin_category_path(category.becomes(Category)), method: :delete, data: { confirm: t('shared.confirm_delete') } 
 
             .text-center
               = will_paginate @categories, renderer: BootstrapPagination::Rails, inner_window: 3, outer_window: 1

@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
 
-  belongs_to :category
+  belongs_to :post_category, foreign_key: :category_id
   belongs_to :user
 
   friendly_id :title, use: [:slugged, :finders]

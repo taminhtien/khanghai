@@ -1,0 +1,12 @@
+- provide(:main_title_primary, 'Tin tức pháp luật')
+- provide(:main_title_secondary, 'Những tin tức và câu chuyện pháp luật được trải nghiệm bởi chính đội ngũ luật sư chúng tôi')
+- breadcrumb :forms
+
+#forms-index-container
+  - if @forms.empty?
+    p Không có bài viết
+  - else
+    = render @forms
+
+    .pagination-wrapper
+      = will_paginate @forms, renderer: BootstrapPagination::Rails

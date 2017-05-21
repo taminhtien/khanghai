@@ -10,6 +10,10 @@ crumb :posts do
   link 'Posts', posts_path
 end
 
+crumb :forms do
+  link 'Form Applications', forms_path
+end
+
 crumb :about_us do
   link 'About us', about_us_path
 end
@@ -26,4 +30,9 @@ end
 crumb :post do |post|
   link post.title, post
   parent :posts
+end
+
+crumb :form do |form|
+  link form.title, form
+  parent :forms
 end

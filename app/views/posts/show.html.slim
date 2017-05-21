@@ -12,8 +12,7 @@
           span.meta-data__separator |
           span.meta-data__author = @post.user.name
           span.meta-data__separator |
-          span.meta-data__categories
-            = link_to @post.category.name, @post.category
+          span.meta-data__categories = @post.post_category.name
       h2.title
         = link_to @post.title, @post
     

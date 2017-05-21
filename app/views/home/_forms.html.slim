@@ -1,0 +1,21 @@
+.home-news-container
+  .container
+    .row
+      .col-md-12
+        .widget-title--big
+          h3.widget-title
+            span.widget-title__inline = t('home_page.forms')
+      .col-md-12
+        .row
+          = render partial: 'form', locals: { form: @forms[0] }
+          = render partial: 'form', locals: { form: @forms[1] } if @forms[1]
+
+          .col-md-4
+            / .latest-news__container
+            / - @forms.each do |form|
+            /   = link_to '#', class: 'latest-news latest-news--inline' do
+            /     .latest-news__content
+            /       h4.latest-news__title = form.title
+            /       .latest-news__full-date = format_datetime(form.created_at)
+
+            / = link_to 'More news', forms_path, class: 'latest-news latest-news--more-news'

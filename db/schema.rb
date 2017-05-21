@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170408153614) do
+ActiveRecord::Schema.define(version: 20170521092614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170408153614) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -76,6 +77,21 @@ ActiveRecord::Schema.define(version: 20170408153614) do
     t.datetime "updated_at",        default: '2017-04-01 15:38:45'
     t.integer  "birthday"
   end
+
+  create_table "forms", force: :cascade do |t|
+    t.string   "title"
+    t.string   "content"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.integer  "category_id"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "forms", ["category_id"], name: "index_forms_on_category_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false

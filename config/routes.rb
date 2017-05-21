@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :services, only: [:index, :show]
   resources :contacts, only: [:new, :create]
   resources :posts, only: [:index, :show]
+  resources :forms, only: [:index, :show]
   
   resources :categories, only: [:show] do
     resources :posts, only: [:index]
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
     resources :contracts
     resources :services
     resources :posts
+    resources :forms
     resources :contacts
     resources :categories
     resources :users

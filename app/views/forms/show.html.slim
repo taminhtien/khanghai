@@ -1,0 +1,21 @@
+- provide(:main_title_primary, 'Biểu mẫu')
+- provide(:main_title_secondary, 'What we do and what can you expect from us')
+- breadcrumb :form, @form
+
+#forms-show-container
+  article.article
+    header
+      .meta
+        .meta-data
+          time datetime="#{@form.created_at}" = format_datetime(@form.created_at)
+          span.meta-data__separator |
+          span.meta-data__categories = @form.form_category.name
+      h2.title
+        = link_to @form.title, @form
+    
+    .entry-content
+      p == @form.content
+
+    hr
+      p Tải xuống đính kèm
+      = link_to @form.attachment_file_name, @form.attachment.url

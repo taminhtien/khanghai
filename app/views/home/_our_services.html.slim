@@ -1,5 +1,11 @@
 .home-our-services-container
   .container
+    .row
+      .col-md-12
+        .widget-title--big
+          h3.widget-title
+            span.widget-title__inline = t('home_page.header.service')
+
     - @services.each_slice(3) do |services|
       .row
         - services.each do |service|
