@@ -33,6 +33,7 @@ gem 'enumerize'
 gem 'mina', '~> 0.3.8'
 gem 'rails_utils'
 gem 'bootstrap-datepicker-rails'
+gem 'cocoon'
 
 group :development, :test do
   gem 'rspec-rails'

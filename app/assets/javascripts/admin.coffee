@@ -6,5 +6,6 @@
 #= require bootstrap-confirmation.min
 #= require ckeditor/init
 #= require bootstrap-datepicker
+#= require cocoon
 #= require utils
 #= require global

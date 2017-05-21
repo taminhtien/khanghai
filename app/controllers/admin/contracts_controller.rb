@@ -57,6 +57,23 @@ class Admin::ContractsController < Admin::BaseController
   end
 
   def contract_params
-    params.require(:contract).permit(:code, :type, :customer_id, :assignee, :assigned_date, :estimate_completed_date, :summary, :requirement, :development, :propose_assignee)
+    params.require(:contract).permit(
+      :code,
+      :type,
+      :customer_id,
+      :assigner,
+      :assignee,
+      :approved_date,
+      :estimate_completed_date,
+      :summary,
+      :requirement,
+      :development,
+      :result,
+      :action,
+      contract_attachments_attributes: [
+        :id,
+        :attachment,
+        :_destroy
+      ])
   end
 end

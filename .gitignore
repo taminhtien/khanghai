@@ -17,4 +17,6 @@ tientm.pem
 /public/system/users/
 /public/system/posts/
 /public/system/services/
+/public/system/forms/
+/public/system/contract_attachments/
 /public/ckeditor_assets/

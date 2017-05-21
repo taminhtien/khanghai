@@ -76,14 +76,17 @@ vi:
         first_name: 'Tên'
         last_name: 'Họ'
         role: 'Vai trò'
-        assigned_date: 'Ngày chỉ định'
-        assignee: 'Người được chỉ định'
-        assignee_date: 'Ngày tạo chỉ định'
-        estimate_completed_date: 'Ngày hoàn thành dự tính'
+        assigner: 'Người giao hồ sơ'
+        assignee: 'Người nhận thụ lý'
+        approved_date: 'Ngày thụ lý'
+        estimate_completed_date: 'Dự kiến hoàn thành'
         summary: 'Tổng quan'
         requirement: 'Yêu cầu của khách'
         development: 'Diễn biến vụ việc'
-        propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
+        result: 'Kết quả'
+        action: 'Hành động'
+      contract_attachment:
+        attachment: 'Đính kèm'
   customer:
     show:
       heading: 'Khách hàng'
@@ -196,15 +199,17 @@ vi:
     first_name: 'Tên'
     last_name: 'Họ'
     role: 'Vai trò'
-    assigned_date: 'Ngày chỉ định'
-    assignee: 'Người được chỉ định'
-    assignee_date: 'Ngày tạo chỉ định'
-    estimate_completed_date: 'Ngày hoàn thành tự tính'
+    assigner: 'Người giao hồ sơ'
+    assignee: 'Người nhận thụ lý'
+    approved_date: 'Ngày thụ lý'
+    estimate_completed_date: 'Dự kiến hoàn thành'
     summary: 'Tổng quan'
     requirement: 'Yêu cầu của khách'
     development: 'Diễn biến vụ việc'
-    propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
+    result: 'Kết quả'
+    action: 'Hành động'
     type: 'Loại hợp đồng'
+    contract_attachments: 'Hồ sơ vụ việc'
   form:
     show:
       heading: 'Biểu mẫu'
@@ -284,20 +289,23 @@ vi:
         last_name: 'Họ'
         role: 'Vai trò'
         type: 'Loại hợp đồng'
-        assigned_date: 'Ngày chỉ định'
-        assignee: 'Người được chỉ định'
-        assignee_date: 'Ngày tạo chỉ định'
-        estimate_completed_date: 'Ngày hoàn thành dự tính'
+        assigner: 'Người giao hồ sơ'
+        assignee: 'Người nhận thụ lý'
+        approved_date: 'Ngày thụ lý'
+        estimate_completed_date: 'Dự kiến hoàn thành'
         summary: 'Tổng quan'
         requirement: 'Yêu cầu của khách'
         development: 'Diễn biến vụ việc'
-        propose_assignee: 'Đề xuất người thụ hưởng hồ sơ' 
+        result: 'Kết quả'
+        action: 'Hành động'
       form:
         title: 'Tiêu đề'
         category_id: 'Thư mục'
         content: 'Nội dung'
         form: 'Tệp đính kèm'
         slug: 'Đường dẫn URL'
+      contract_attachment:
+        attachment: 'Đính kèm'
     options:
       user:
         role:
@@ -305,14 +313,20 @@ vi:
           staff: 'Nhân viên công ty'
   admin:
     menu:
-      customers: 'Quản lý khách hàng'
-      services: 'Quản lý dịch vụ'
-      posts: 'Quản lý bài viết'
-      users: 'Quản lý nhân sự'
-      categories: 'Quản lý thư mục'
-      contacts: 'Quản lý liên hệ'
-      contracts: 'Quản lý hợp đồng'
-      forms: 'Quản lý biểu mẫu'
+      customers: 'Khách hàng'
+      services: 'Dịch vụ'
+      posts: 'Bài viết'
+      users: 'Người dùng'
+      categories: 'Thư mục'
+      contacts: 'Liên hệ'
+      contracts: 'Hợp đồng'
+      forms: 'Biểu mẫu'
+    contracts:
+      form:
+        add_more_contract_attachment: 'Tải thêm đính kèm'
+        remove_contract_attachment: 'Xóa đính kèm'
+        contract_attachments: 'Hồ sơ vụ việc'
+
   breadcrumbs:
     index: 'Trang chủ'
     forms: 'Biểu mẫu'

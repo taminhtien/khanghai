@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521092614) do
+ActiveRecord::Schema.define(version: 20170521132850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,19 +51,31 @@ ActiveRecord::Schema.define(version: 20170521092614) do
     t.datetime "updated_at",   default: '2017-04-02 10:08:35'
   end
 
+  create_table "contract_attachments", force: :cascade do |t|
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+    t.integer  "contract_id"
+  end
+
+  add_index "contract_attachments", ["contract_id"], name: "index_contract_attachments_on_contract_id", using: :btree
+
   create_table "contracts", force: :cascade do |t|
     t.string   "code"
     t.string   "type"
-    t.string   "assignee"
-    t.datetime "assigned_date"
+    t.string   "assigner"
+    t.datetime "approved_date"
     t.datetime "estimate_completed_date"
     t.text     "summary"
     t.text     "requirement"
     t.text     "development"
-    t.string   "propose_assignee"
+    t.string   "assignee"
     t.integer  "customer_id"
     t.datetime "created_at",              default: '2017-04-01 15:38:45'
     t.datetime "updated_at",              default: '2017-04-01 15:38:45'
+    t.text     "result"
+    t.text     "action"
   end
 
   add_index "contracts", ["customer_id"], name: "index_contracts_on_customer_id", using: :btree

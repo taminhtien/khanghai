@@ -13,17 +13,20 @@
                 th = t('contract.code')
                 td = @contract.code
               tr
+                th = t('contract.type')
+                td = @contract.type_text
+              tr
                 th = t('contract.customer')
                 td = link_to @contract.customer.name, [:admin, @contract.customer]
               tr
-                th = t('contract.type')
-                td = @contract.type_text
+                th = t('contract.assigner')
+                td = @contract.assigner
               tr
                 th = t('contract.assignee')
                 td = @contract.assignee
               tr
-                th = t('contract.assigned_date')
-                td = format_datetime(@contract.assigned_date)
+                th = t('contract.approved_date')
+                td = format_datetime(@contract.approved_date)
               tr
                 th = t('contract.estimate_completed_date')
                 td = format_datetime(@contract.estimate_completed_date)
@@ -37,9 +40,14 @@
                 th == t('contract.development')
                 td == @contract.development
               tr
-                th = t('contract.propose_assignee')
-                td = @contract.propose_assignee
-
+                th = t('contract.result')
+                td = @contract.result
+              tr
+                th = t('contract.action')
+                td = @contract.action
+              tr
+                th = t('contract.contract_attachments')
+                td = comma_seperated_attachments_for(@contract.contract_attachments, :attachment)
             .pull-right
               .btn-group
                 = link_to t('shared.edit'), edit_admin_contract_path(@contract), class: 'btn btn-default'

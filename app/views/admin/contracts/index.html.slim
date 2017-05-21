@@ -16,30 +16,34 @@
                   tr
                     th ID
                     th = t('contract.code')
-                    th = t('contract.customer')
                     th = t('contract.type')
+                    th = t('contract.customer')
+                    th = t('contract.assigner')
                     th = t('contract.assignee')
-                    th = t('contract.assigned_date')
+                    th = t('contract.approved_date')
                     th = t('contract.estimate_completed_date')
                     th = t('contract.summary')
                     th = t('contract.requirement')
                     th = t('contract.development')
-                    th = t('contract.propose_assignee')
+                    th = t('contract.result')
+                    th = t('contract.action')
                     th = t('shared.action')
                 tbody
                   - @contracts.each do |contract|
                     tr
                       td = contract.id
                       td = contract.code
-                      td = link_to contract.customer.try(&:name), [:admin, contract.customer]
                       td = contract.type_text
+                      td = link_to contract.customer.try(&:name), [:admin, contract.customer]
+                      td = contract.assigner
                       td = contract.assignee
-                      td = format_datetime(contract.assigned_date)
+                      td = format_datetime(contract.approved_date)
                       td = format_datetime(contract.estimate_completed_date)
                       td == contract.summary
                       td == contract.requirement
                       td == contract.development
-                      td = contract.propose_assignee
+                      td == contract.result
+                      td == contract.action
                       td
                         ul.list-inline
                           li = link_to t('shared.show'), [:admin, contract]
