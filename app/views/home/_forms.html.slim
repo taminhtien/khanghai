@@ -12,7 +12,7 @@
 
           .col-md-4
             .latest-news__container
-              - if @forms.length >= 2
+              - if @forms.length > 2
                 - @forms[2..-1].each do |form|
                   = link_to '#', class: 'latest-news latest-news--inline' do
                     .latest-news__content
