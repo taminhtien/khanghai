@@ -2,7 +2,7 @@ class Admin::ServicesController < Admin::BaseController
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
   def index
-    @services = Service.all.paginate(page: params[:page], per_page: 15)
+    @services = Service.all.order(priority: :asc).paginate(page: params[:page], per_page: 15)
   end
 
   def show
@@ -57,6 +57,6 @@ class Admin::ServicesController < Admin::BaseController
   end
 
   def service_params
-    params.require(:service).permit(:title, :short_description, :content, :slug, :picture)
+    params.require(:service).permit(:title, :short_description, :content, :slug, :picture, :priority)
   end
 end

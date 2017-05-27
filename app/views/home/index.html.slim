@@ -4,7 +4,7 @@
   = render 'news' if @posts.any?
   = render 'forms' if @forms.any?
   = render 'clients'
-  = render partial: 'shared/map', locals: { markers: [{lat: 10.8809411, lng: 106.5936243, description: 'Khang Hai Lawfirm'}].to_json,
+  / = render partial: 'shared/map', locals: { markers: [{lat: 10.8809411, lng: 106.5936243, description: 'Khang Hai Lawfirm'}].to_json,
                                             center_lat: 10.8809411,
                                             center_lng: 106.5936243,
                                             zoom: 14 }

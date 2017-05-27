@@ -1,7 +1,7 @@
 = simple_form_for [:admin, @service], wrapper: :vertical_form do |f|
   = f.input :title
-  = f.input :short_description
+  = f.input :priority
+  = f.input :short_description, as: :ckeditor
   = f.input :content, as: :ckeditor
-  = f.input :slug
   = f.input :picture
   = f.submit t('shared.submit'), class: 'btn btn-default'

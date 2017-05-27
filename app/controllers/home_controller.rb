@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   def index
     @posts = Post.order(created_at: :asc).limit(5)
     @forms = Form.order(created_at: :asc).limit(5)
-    @services = Service.all
+    @services = Service.all.order(priority: :asc)
     @employees = User.where.not(role: :admin)
   end
 
