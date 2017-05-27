@@ -1,6 +1,6 @@
 .shared-main-title-container {
   .main-title {
-    background-image: url(asset_url(pattern-background.png));
+    background-image: url(image_path('pattern-background.png'));
     background-color: $white-smoke;
     padding: 40px 0;
     margin-bottom: 30px;
