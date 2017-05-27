@@ -343,7 +343,7 @@ vi:
       recovered_for_our_clients: 'Thu hồi cho khách hàng'
       successful_cases: 'Hợp đồng thành công'
     the_news: 'Tin tức và sự kiện'
-    forms: 'Biểu mẫu'
+    forms: 'Biểu mẫu, Thủ tục hành chính'
     important_clients: 'Khách hàng'
     internship:
       title: 'Bạn muốn thực tập tại công ty chúng tôi?'
@@ -357,7 +357,7 @@ vi:
     read_more: 'Chi tiết'
     header:
       company_name: 'Công ty Luật Khang Hải'
-      working_hour: 'Thứ 2 - Thứ 7: 7:00 - 17:00'
+      working_hour: 'Thứ 2 - Thứ 7: 8:00 - 18:00'
       email: 'lskhanghai@gmail.com'
       address: '1/4D Bà Triệu, Hóc Môn, TP. HCM'
       hotline: '0908362606'
