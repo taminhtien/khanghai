@@ -16,6 +16,7 @@
     .entry-content
       p == @form.content
 
-    hr
-      p Tải xuống đính kèm
-      = link_to @form.attachment_file_name, @form.attachment.url
+    - if @form.attachment_file_name
+      hr
+        p Tải xuống đính kèm
+        = link_to @form.attachment_file_name, @form.attachment.url
