@@ -1,7 +1,7 @@
 #home-index-container
   = render 'slider'
   = render 'our_services'
-  = render 'news'
+  = render 'news' if @posts.any?
   = render 'forms' if @forms.any?
   = render 'clients'
   = render partial: 'shared/map', locals: { markers: [{lat: 10.8809411, lng: 106.5936243, description: 'Khang Hai Lawfirm'}].to_json,
