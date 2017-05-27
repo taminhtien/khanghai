@@ -27,7 +27,7 @@
                     tr
                       td = service.title
                       td = service.priority
-                      td = service.short_description
+                      td == service.short_description
                       td == service.content
                       td = service.slug
                       td = format_datetime(service.created_at)
