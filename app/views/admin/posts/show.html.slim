@@ -21,7 +21,7 @@
                   td = image_tag @post.picture, class: 'img-responsive'
                 tr
                   th = t('post.category')
-                  td = link_to @post.category.name, '#'
+                  td = link_to @post.post_category.name, '#'
                 tr
                   th = t('post.name')
                   td = link_to @post.user.name, '#'
