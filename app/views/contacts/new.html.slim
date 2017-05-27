@@ -3,11 +3,6 @@
 - breadcrumb :contact_us
 
 #contacts-new-container
-  = render partial: 'shared/map', locals: { markers: [{lat: 10.8809411, lng: 106.5936243, description: 'Khang Hai Lawfirm'}].to_json,
-                                            center_lat: 10.8809411,
-                                            center_lng: 106.5936243,
-                                            zoom: 14 }
-
   #primary.content-area.container
     .row
       main#main.site-main.col-xs-12 role='main'
@@ -22,7 +17,7 @@
                   p
                     strong Công ty Luật TNHH Khang Hải
                     br
-                    | 1/4D Bà Triệu, Ấp Đình, Xã Tân Xuân, Huyện Hóc Môn, TP.Hồ Chí Minh
+                    = link_to '1/4D Bà Triệu, Ấp Đình, Xã Tân Xuân, Huyện Hóc Môn, TP.Hồ Chí Minh', "https://www.google.com/maps/place/1%2F4+B%C3%A0+Tri%E1%BB%87u+%E1%BA%A5p+%C4%90%C3%ACnh,+T%C3%A2n+Xu%C3%A2n,+H%C3%B3c+M%C3%B4n,+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.8809836,106.5934475,19.22z/data=!4m8!1m2!2m1!1s1%2F4d+B%C3%A0+Tri%E1%BB%87u,+Ho+Chi+Minh+City,+Ho+Chi+Minh,+Vietnam!3m4!1s0x31752a778a8fac21:0x5d50c868e19e7cb1!8m2!3d10.8807181!4d106.593822", target: :blank
                   p
                     | Website: www.khanghai.com.vn
                     br
