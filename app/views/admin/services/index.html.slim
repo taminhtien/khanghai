@@ -28,7 +28,7 @@
                       td = service.title
                       td = service.priority
                       td == service.short_description
-                      td == service.content
+                      td == service.content.truncate(400)
                       td = service.slug
                       td = format_datetime(service.created_at)
                       td = format_datetime(service.updated_at)

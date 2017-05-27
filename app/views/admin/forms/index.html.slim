@@ -29,8 +29,11 @@
                       td = form.id
                       td = form.title
                       td = link_to form.form_category.name, admin_category_path(form.form_category)
-                      td = link_to form.attachment_file_name, form.attachment.url
-                      td == form.content
+                      - if form.attachment_file_name
+                        td = link_to form.attachment_file_name, form.attachment.url
+                      - else
+                        td
+                      td == form.content.truncate(400)
                       td = form.slug
                       td = format_datetime(form.created_at)
                       td = format_datetime(form.updated_at)

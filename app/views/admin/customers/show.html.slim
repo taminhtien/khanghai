@@ -25,6 +25,9 @@
                 th = t('customer.contact_address')
                 td = @customer.contact_address
               tr
+                th = t('customer.contracts')
+                td = admin_comma_seperated_links_for(@customer.contracts, :code)
+              tr
                 th = t('shared.created_at')
                 td = format_datetime(@customer.created_at)
               tr

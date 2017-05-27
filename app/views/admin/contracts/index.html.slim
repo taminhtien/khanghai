@@ -39,9 +39,9 @@
                       td = contract.assignee
                       td = format_datetime(contract.approved_date)
                       td = format_datetime(contract.estimate_completed_date)
-                      td == contract.summary
-                      td == contract.requirement
-                      td == contract.development
+                      td == contract.summary.truncate(400)
+                      td == contract.requirement.truncate(400)
+                      td == contract.development.truncate(400)
                       td == contract.result
                       td == contract.action
                       td

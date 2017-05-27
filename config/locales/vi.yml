@@ -103,6 +103,7 @@ vi:
     contact_address: 'Địa chỉ liên hệ'
     phone_number: 'Số điện thoại'
     birthday: 'Năm sinh'
+    contracts: 'Hợp đồng'
   service:
     show:
       heading: 'Dịch vụ'
