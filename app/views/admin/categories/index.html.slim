@@ -16,7 +16,6 @@
                   tr
                     th ID
                     th = t('category.name')
-                    th = t('category.type')
                     th = t('shared.created_at')
                     th = t('shared.updated_at')
                     th = t('shared.action')
@@ -25,7 +24,6 @@
                     tr
                       td = category.id
                       td = category.name
-                      td = category.type_text
                       td = format_datetime(category.created_at)
                       td = format_datetime(category.updated_at)
                       td

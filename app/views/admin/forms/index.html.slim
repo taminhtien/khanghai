@@ -17,6 +17,7 @@
                     th ID
                     th = t('form.title')
                     th = t('form.category')
+                    th = t('post.name')
                     th = t('form.form')
                     th = t('form.content')
                     th = t('form.slug')
@@ -28,7 +29,8 @@
                     tr
                       td = form.id
                       td = form.title
-                      td = link_to form.form_category.name, admin_category_path(form.form_category)
+                      td = link_to form.category.name, admin_category_path(form.category)
+                      td = link_to form.user.name, admin_user_path(form.user)
                       - if form.attachment_file_name
                         td = link_to form.attachment_file_name, form.attachment.url
                       - else

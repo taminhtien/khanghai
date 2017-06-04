@@ -1,17 +1,19 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
+  extend Enumerize
 
-  belongs_to :post_category, foreign_key: :category_id
+  belongs_to :category
   belongs_to :user
 
   friendly_id :title, use: [:slugged, :finders]
+  enumerize :type, in: [:Post, :Form, :QuestionAndAnswer]
 
-  has_attached_file    :picture, styles:       { large: '848x480#' },
-                                 default_url:  'posts/picture/:style/missing.png'
+  has_attached_file :attachment
+  has_attached_file :picture, styles: { large: '848x480#' }, default_url:  'posts/picture/:style/missing.png'
 
-  validates_attachment :picture, content_type: { content_type: /\Aimage\/.*\Z/ },
-                                 size:         { less_than: 5.megabyte }
-  
+  validates_attachment :picture, content_type: { content_type: /\Aimage\/.*\Z/ }, size: { less_than: 5.megabyte }
+  validates_attachment :attachment, :content_type => { :content_type => Rails.application.config.form_attachment_types }, :size => { :less_than => 10.megabyte }
+
   validates :title,       presence: true
   validates :content,     presence: true
   validates :category_id, presence: true

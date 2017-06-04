@@ -18,7 +18,7 @@
                   td = @form.title
                 tr
                   th = t('form.category')
-                  td = link_to @form.form_category.name, @form.form_category.becomes(Category)
+                  td = link_to @form.category.name, admin_category_path(@form.category)
                 tr
                   th = t('form.form')
                   - if @form.attachment_file_name
@@ -41,4 +41,4 @@
             .pull-right
               .btn-group
                 = link_to t('shared.edit'), edit_admin_form_path(@form), class: 'btn btn-default'
-                = link_to t('shared.delete'), admin_user_path(@form), method: :delete, data: { confirm: t('shared.confirm_delete') }, class: 'btn btn-default'
+                = link_to t('shared.delete'), admin_form_path(@form), method: :delete, data: { confirm: t('shared.confirm_delete') }, class: 'btn btn-default'

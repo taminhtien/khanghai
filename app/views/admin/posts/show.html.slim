@@ -21,7 +21,7 @@
                   td = image_tag @post.picture, class: 'img-responsive'
                 tr
                   th = t('post.category')
-                  td = link_to @post.post_category.name, '#'
+                  td = link_to @post.category.name, admin_category_path(@post.category)
                 tr
                   th = t('post.name')
                   td = link_to @post.user.name, '#'
@@ -41,4 +41,4 @@
             .pull-right
               .btn-group
                 = link_to t('shared.edit'), edit_admin_post_path(@post), class: 'btn btn-default'
-                = link_to t('shared.delete'), admin_user_path(@post), method: :delete, data: { confirm: t('shared.confirm_delete') }, class: 'btn btn-default'
+                = link_to t('shared.delete'), admin_post_path(@post), method: :delete, data: { confirm: t('shared.confirm_delete') }, class: 'btn btn-default'

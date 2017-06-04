@@ -8,11 +8,7 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :posts, only: [:index, :show]
   resources :forms, only: [:index, :show]
-  
-  resources :categories, only: [:show] do
-    resources :posts, only: [:index]
-    resources :forms, only: [:index]
-  end
+  resources :categories, only: [:show]
 
   namespace :admin do
     get '/', to: "home#index"

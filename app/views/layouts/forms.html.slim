@@ -30,9 +30,9 @@ html
             .widget.widget_categories
               h4.sidebar__headings = t('layouts.posts.category_heading')
               ul
-                - FormCategory.all.each do |category|
+                - Category.where(id: Form.all.pluck(:category_id)).each do |category|
                   li
-                    = link_to category.name, category_forms_path(category)
+                    = link_to category.name, forms_path(category_id: category.id)
 
             .widget
               h4.sidebar__headings Facebook

@@ -57,6 +57,6 @@ class Admin::FormsController < Admin::BaseController
   end
 
   def form_params
-    params.require(:form).permit(:title, :content, :attachment, :category_id)
+    params.require(:form).permit(:title, :content, :attachment, :category_id, :user_id)
   end
 end

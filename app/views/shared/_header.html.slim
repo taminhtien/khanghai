@@ -40,7 +40,7 @@
               ul.sub-menu
                 - Service.all.order(priority: :asc).each do |service|
                   li = link_to service.title, service
-            li = active_link_to "#{t('home_page.header.news')}", posts_path, active: :exact
-            li = active_link_to "#{t('home_page.header.documents')}", forms_path, active: :exact
-            li = active_link_to "#{t('home_page.header.qa')}", '#', active: :exact
-            li = active_link_to "#{t('home_page.header.contact_us')}", contact_us_path, active: :exact
+            li = active_link_to "#{t('home_page.header.news')}", posts_path, active: :exclusive
+            li = active_link_to "#{t('home_page.header.documents')}", forms_path, active: :exclusive
+            li = active_link_to "#{t('home_page.header.qa')}", '#', active: :exclusive
+            li = active_link_to "#{t('home_page.header.contact_us')}", contact_us_path, active: :exclusive

@@ -2,7 +2,7 @@ class Admin::PostsController < Admin::BaseController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all.paginate(page: params[:page], per_page: 15)
+    @posts = Post.where(type: :Post).paginate(page: params[:page], per_page: 15)
   end
 
   def show

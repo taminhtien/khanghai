@@ -1,4 +1,3 @@
 = simple_form_for [:admin, @category.becomes(Category)], wrapper: :vertical_form do |f|
   = f.input :name
-  = f.input :type, as: :select
   = f.submit t('shared.submit'), class: 'btn btn-default'

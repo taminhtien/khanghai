@@ -308,6 +308,7 @@ vi:
         content: 'Nội dung'
         form: 'Tệp đính kèm'
         slug: 'Đường dẫn URL'
+        user_id: 'Người viết bài'
       contract_attachment:
         attachment: 'Đính kèm'
     options:
