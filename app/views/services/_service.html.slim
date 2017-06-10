@@ -5,4 +5,4 @@
       .content
         h5.title
           = link_to service.title, service
-        p == service.content.truncate(100)
+        p == service.short_description
