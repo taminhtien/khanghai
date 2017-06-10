@@ -1,4 +1,4 @@
-= simple_form_for [:admin, @post], wrapper: :vertical_form do |f|
+= simple_form_for [:admin, @post.becomes(Post)], wrapper: :vertical_form do |f|
   = f.input :type
   = f.input :title
   = f.input :picture
