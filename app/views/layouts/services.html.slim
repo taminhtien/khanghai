@@ -19,8 +19,8 @@ html
             .widget.widget_nav_menu
               .menu-services-menu-container
                 ul#menu-services-menu.menu
-                  li = active_link_to 'All Services', services_path, active: :exact
-                  - Service.all.each do |service|
+                  li = active_link_to 'Tất cả dịch vụ', services_path, active: :exact
+                  - Service.all.order(priority: :asc).each do |service|
                     li = active_link_to service.title, service, active: :exact
 
     footer
