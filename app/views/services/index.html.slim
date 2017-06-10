@@ -3,5 +3,6 @@
 - breadcrumb :services
 
 #services-index-container
-  .row
-    = render @services
+  - @services.each_slice(3) do |services|
+    .row
+      = render services

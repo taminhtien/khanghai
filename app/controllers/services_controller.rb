@@ -3,7 +3,7 @@ class ServicesController < ApplicationController
   before_action :set_service, only: [:show]
 
   def index
-    @services = Service.all
+    @services = Service.all.order(priority: :asc)
   end
 
   def show; end
