@@ -24,6 +24,7 @@ gem 'puma'
 gem 'active_link_to'
 gem 'seedbank'
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'gretel'
 gem 'ckeditor'
 gem 'devise'
@@ -45,6 +46,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'awesome_print'
   gem 'byebug'
+  gem 'dotenv-rails'
 end
 
 group :development do

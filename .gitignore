@@ -20,3 +20,4 @@ tientm.pem
 /public/system/forms/
 /public/system/contract_attachments/
 /public/ckeditor_assets/
+/.env
