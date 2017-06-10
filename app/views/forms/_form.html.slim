@@ -3,7 +3,7 @@
     header
       .meta
         .meta-data
-          time datetime="#{form.created_at}" = format_datetime(form.created_at)
+          time datetime="#{form.updated_at}" = format_datetime(form.updated_at)
           span.meta-data__separator |
           span.meta-data__categories = form.category.name
       h2.title
