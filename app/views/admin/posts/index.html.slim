@@ -15,6 +15,7 @@
                 thead
                   tr
                     th ID
+                    th = t('post.type')
                     th = t('post.title')
                     th = t('post.picture')
                     th = t('post.category')
@@ -28,6 +29,7 @@
                   - @posts.each do |post|
                     tr
                       td = post.id
+                      td = post.type
                       td = post.title
                       td = image_tag post.picture.url, class: 'img-responsive'
                       td = link_to post.category.name, admin_category_path(post.category)

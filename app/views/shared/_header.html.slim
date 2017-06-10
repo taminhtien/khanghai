@@ -22,7 +22,7 @@
   .container
     .header
       .header__logo
-        = link_to (image_tag 'logo.png'), root_url
+        = active_link_to image_tag('logo.png'), root_url, active: [['home'], ['index']]
         button.navbar-toggle type='button' data-toggle='collapse' data-target='#legalpress-navbar-collapse'
           span.navbar-toggle__text MENU
           span.navbar-toggle__icon-bar
@@ -33,14 +33,18 @@
       .header__navigation
         nav.collapse.navbar-collapse aria-label='Main Menu' id='legalpress-navbar-collapse'
           ul#menu-main-menu class='main-navigation js-main-nav' role='menubar'
-            li = active_link_to "#{t('home_page.header.home')}", root_url, active: :exact
+            li = active_link_to "#{t('home_page.header.home')}", root_url, active: [['home'], ['index']]
             li = active_link_to "#{t('home_page.header.about_us')}", about_us_path, active: :exact
             li.has-children
-              = link_to "#{t('home_page.header.service')}", services_path
+              = active_link_to "#{t('home_page.header.service')}", services_path, :active => [['services'], ['index', 'show']]
               ul.sub-menu
                 - Service.all.order(priority: :asc).each do |service|
                   li = link_to service.title, service
-            li = active_link_to "#{t('home_page.header.news')}", posts_path, active: :exclusive
+            li.has-children
+              = active_link_to 'Tin tức & sự kiện', news_posts_path, :active => [['posts'], ['index', 'news', 'documents']]
+              ul.sub-menu
+                li = link_to 'Tin tức & sự kiện', news_posts_path
+                li = link_to 'Văn bản mới', documents_posts_path
             li = active_link_to "#{t('home_page.header.documents')}", forms_path, active: :exclusive
-            li = active_link_to "#{t('home_page.header.qa')}", '#', active: :exclusive
+            li = active_link_to "#{t('home_page.header.qa')}", question_and_answers_posts_path, active: :exclusive
             li = active_link_to "#{t('home_page.header.contact_us')}", contact_us_path, active: :exclusive

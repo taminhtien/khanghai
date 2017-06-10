@@ -6,7 +6,8 @@
   - if @posts.empty?
     p Không có bài viết
   - else
-    = render @posts
+    - @posts.each do |post|
+      = render post.becomes(Post)
 
     .pagination-wrapper
       = will_paginate @posts, renderer: BootstrapPagination::Rails

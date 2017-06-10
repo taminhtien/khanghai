@@ -24,7 +24,7 @@ html
                 = render partial: 'shared/employee', locals: { employee: User.find_by_role(:ceo) }
             
             .widget.widget_search
-              = form_tag '/posts', method: :get do
+              = form_tag @search_url, method: :get do
                 label
                   = search_field_tag :q, nil, placeholder: t('layouts.posts.search_placeholder'), class: 'search-field'
 

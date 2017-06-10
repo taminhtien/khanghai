@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   belongs_to :user
 
   friendly_id :title, use: [:slugged, :finders]
-  enumerize :type, in: [:Post, :Form, :QuestionAndAnswer]
+  enumerize :type, in: [:Form, :QuestionAndAnswer, :New, :Document]
 
   has_attached_file :attachment
   has_attached_file :picture, styles: { large: '848x480#' }, default_url:  'posts/picture/:style/missing.png'

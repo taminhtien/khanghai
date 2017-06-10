@@ -14,7 +14,7 @@
           span.meta-data__separator |
           span.meta-data__categories = @post.category.name
       h2.title
-        = link_to @post.title, @post
+        = link_to @post.title, post_url(@post)
     
     .entry-content
       p == @post.content

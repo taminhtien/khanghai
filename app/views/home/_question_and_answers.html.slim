@@ -1,0 +1,22 @@
+.home-news-container
+  .container
+    .row
+      .col-md-12
+        .widget-title--big
+          h3.widget-title
+            span.widget-title__inline Hỏi đáp
+      .col-md-12
+        .row
+          = render partial: 'new', locals: { post: @question_and_answers[0] } if @question_and_answers[0]
+          = render partial: 'new', locals: { post: @question_and_answers[1] } if @question_and_answers[1]
+
+          .col-md-4
+            .latest-news__container
+              - if @question_and_answers.length > 2
+                - @question_and_answers[2..-1].each do |qa|
+                  = link_to qa, class: 'latest-news latest-news--inline' do
+                    .latest-news__content
+                      h4.latest-news__title = qa.title
+                      .latest-news__full-date = format_datetime(qa.created_at)
+
+                = link_to 'Xem thêm', question_and_answers_posts_path, class: 'latest-news latest-news--more-news'

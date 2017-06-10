@@ -1,9 +1,11 @@
 vi:
   enumerize:
-    category:
+    post:
       type:
-        PostCategory: 'Bài viết'
-        FormCategory: 'Biểu mẫu'
+        New: 'Tin tức - Sự kiện'
+        Document: 'Văn bản mới'
+        Form: 'Biểu mẫu, thủ tục hành chính'
+        QuestionAndAnswer: 'Hỏi đáp'
     contract:
       type:
         civil: 'Dân sự'
@@ -36,6 +38,7 @@ vi:
         slug: 'Đường dẫn URL'
         priority: 'Thứ tự'
       post:
+        type: 'Loại bài viết'
         title: 'Tiêu đề'
         category_id: 'Thư mục'
         user_id: 'Tác giả'
@@ -141,6 +144,7 @@ vi:
       heading: 'Tạo bài viết'
     edit:
       heading: 'Sửa thông tin bài viết'
+    type: 'Loại bài viết'
     title: 'Tiêu đề'
     category: 'Thư mục'
     name: 'Người viết bài'
@@ -254,6 +258,7 @@ vi:
         slug: 'Đường dẫn URL'
         priority: 'Thứ tự'
       post:
+        type: 'Loại bài viết'
         title: 'Tiêu đề'
         category_id: 'Thư mục'
         user_id: 'Người viết bài'

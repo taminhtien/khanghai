@@ -6,7 +6,13 @@ Rails.application.routes.draw do
 
   resources :services, only: [:index, :show]
   resources :contacts, only: [:new, :create]
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show] do
+    collection do
+      get :news
+      get :documents
+      get :question_and_answers
+    end
+  end
   resources :forms, only: [:index, :show]
   resources :categories, only: [:show]
 

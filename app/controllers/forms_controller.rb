@@ -3,7 +3,7 @@ class FormsController < ApplicationController
   before_action :set_form, only: [:show]
 
   def index
-    @forms = Form.all
+    @forms = Form.all.order(id: :desc)
     @forms = @forms.where(category_id: params[:category_id]) if params[:category_id].present?
     @forms = @forms.where('title ILIKE ?', "%#{params[:q]}%") if params[:q].present?
     @forms = @forms.paginate(page: params[:page], per_page: 10)

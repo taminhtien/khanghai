@@ -1,0 +1,2 @@
+class New < Post
+end

@@ -28,7 +28,7 @@ crumb :service do |service|
 end
 
 crumb :post do |post|
-  link post.title.truncate(100), post
+  link post.title.truncate(100), post_url(post)
   parent :posts
 end
 

@@ -20,7 +20,7 @@ class Admin::PostsController < Admin::BaseController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to [:admin, @post], notice: 'Post was successfully created.' }
+        format.html { redirect_to [:admin, @post.becomes(Post)], notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: [:admin, @post] }
       else
         format.html { render :new }
@@ -57,6 +57,6 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def post_params
-    params.require(:post).permit(:title, :category_id, :user_id, :content, :slug, :picture)
+    params.require(:post).permit(:title, :category_id, :user_id, :content, :slug, :picture, :type)
   end
 end

@@ -28,15 +28,15 @@
                   - @forms.each do |form|
                     tr
                       td = form.id
-                      td = form.title
+                      td = form.title.truncate(200)
                       td = link_to form.category.name, admin_category_path(form.category)
                       td = link_to form.user.name, admin_user_path(form.user)
                       - if form.attachment_file_name
                         td = link_to form.attachment_file_name, form.attachment.url
                       - else
                         td
-                      td == form.content.truncate(400)
-                      td = form.slug
+                      td = form.content.truncate(200)
+                      td = form.slug.truncate(200)
                       td = format_datetime(form.created_at)
                       td = format_datetime(form.updated_at)
                       td
