@@ -1,4 +1,8 @@
-#posts-index-container, #forms-index-container {
+#posts-index-container,
+#forms-index-container,
+#new-posts-index-container,
+#documents-index-container,
+#qnas-index-container {
   .pagination-wrapper {
     display: flex;
     justify-content: center;

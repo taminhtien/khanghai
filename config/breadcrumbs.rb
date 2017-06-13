@@ -3,23 +3,23 @@ crumb :root do
 end
 
 crumb :services do
-  link 'Our Services', services_path
+  link 'Dịch vụ', services_path
 end
 
 crumb :posts do
-  link 'Posts', posts_path
+  link 'Bài viết', posts_path
 end
 
 crumb :forms do
-  link t('breadcrumbs.forms'), forms_path
+  link 'Biểu mẫu', forms_path
 end
 
 crumb :about_us do
-  link 'About us', about_us_path
+  link 'Về chúng tôi', about_us_path
 end
 
 crumb :contact_us do
-  link 'Contact us', contact_us_path
+  link 'Liên hệ với chúng tôi', contact_us_path
 end
 
 crumb :service do |service|

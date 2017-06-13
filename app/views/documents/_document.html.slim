@@ -1,0 +1,17 @@
+.documents-document-container
+  article.article
+    header
+      = link_to image_tag(document.picture.url(:large)), class: 'img-responsive'
+      .meta
+        .meta-data
+          time datetime="#{document.updated_at}" = format_datetime(document.updated_at)
+          span.meta-data__separator |
+          span.meta-data__author = document.user.name
+          span.meta-data__separator |
+          span.meta-data__categories = link_to document.category.name, document.category
+      h2.title
+        = link_to document.title, document
+    
+    .entry-content
+      == document.content.truncate(400)
+      p = link_to 'Xem thêm', document, class: 'more-link'

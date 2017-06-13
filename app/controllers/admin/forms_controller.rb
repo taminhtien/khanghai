@@ -2,7 +2,7 @@ class Admin::FormsController < Admin::BaseController
   before_action :set_form, only: [:show, :edit, :update, :destroy]
 
   def index
-    @forms = Form.all.paginate(page: params[:page], per_page: 15)
+    @forms = Form.all.order(id: :desc).paginate(page: params[:page], per_page: 15)
   end
 
   def show

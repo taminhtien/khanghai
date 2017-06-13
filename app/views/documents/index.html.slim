@@ -2,12 +2,12 @@
 - provide(:main_title_secondary, 'Những tin tức và câu chuyện pháp luật được trải nghiệm bởi chính đội ngũ luật sư chúng tôi')
 - breadcrumb :posts
 
-#posts-index-container
-  - if @posts.empty?
+#new-posts-index-container
+  - if @documents.empty?
     p Không có bài viết
   - else
-    - @posts.each do |post|
-      = render post
+    - @documents.each do |document|
+      = render document
 
     .pagination-wrapper
-      = will_paginate @posts, renderer: BootstrapPagination::Rails
+      = will_paginate @documents, renderer: BootstrapPagination::Rails

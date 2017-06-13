@@ -1,0 +1,17 @@
+.qnas-qna-container
+  article.article
+    header
+      = link_to image_tag(qna.picture.url(:large)), class: 'img-responsive'
+      .meta
+        .meta-data
+          time datetime="#{qna.updated_at}" = format_datetime(qna.updated_at)
+          span.meta-data__separator |
+          span.meta-data__author = qna.user.name
+          span.meta-data__separator |
+          span.meta-data__categories = link_to qna.category.name, qna.category
+      h2.title
+        = link_to qna.title, qna_path(qna)
+    
+    .entry-content
+      == qna.content.truncate(400)
+      p = link_to 'Xem thêm', qna_path(qna), class: 'more-link'

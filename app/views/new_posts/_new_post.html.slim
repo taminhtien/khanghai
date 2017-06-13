@@ -1,0 +1,17 @@
+.new-posts-new-post-container
+  article.article
+    header
+      = link_to image_tag(new_post.picture.url(:large)), class: 'img-responsive'
+      .meta
+        .meta-data
+          time datetime="#{new_post.updated_at}" = format_datetime(new_post.updated_at)
+          span.meta-data__separator |
+          span.meta-data__author = new_post.user.name
+          span.meta-data__separator |
+          span.meta-data__categories = link_to new_post.category.name, new_post.category
+      h2.title
+        = link_to new_post.title, new_post_path(new_post)
+    
+    .entry-content
+      == new_post.content.truncate(400)
+      p = link_to 'Xem thêm', new_post_path(new_post), class: 'more-link'

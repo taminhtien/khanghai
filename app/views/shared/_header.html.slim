@@ -41,10 +41,10 @@
                 - Service.all.order(priority: :asc).each do |service|
                   li = link_to service.title, service
             li.has-children
-              = active_link_to 'Tin tức & sự kiện', news_posts_path, :active => [['posts'], ['index', 'news', 'documents']]
+              = active_link_to 'Tin tức & sự kiện', new_posts_path, :active => [['new_posts'], ['index', 'show']]
               ul.sub-menu
-                li = link_to 'Tin tức & sự kiện', news_posts_path
-                li = link_to 'Văn bản mới', documents_posts_path
+                li = link_to 'Tin tức & sự kiện', new_posts_path
+                li = link_to 'Văn bản mới', documents_path
             li = active_link_to "#{t('home_page.header.documents')}", forms_path, active: :exclusive
-            li = active_link_to "#{t('home_page.header.qa')}", question_and_answers_posts_path, active: :exclusive
+            li = active_link_to "#{t('home_page.header.qa')}", qnas_path, active: [['qnas'], ['index', 'show']]
             li = active_link_to "#{t('home_page.header.contact_us')}", contact_us_path, active: :exclusive

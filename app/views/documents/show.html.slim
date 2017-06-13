@@ -1,0 +1,20 @@
+- provide(:main_title_primary, 'Tin tức pháp luật')
+- provide(:main_title_secondary, 'Những tin tức và câu chuyện pháp luật được trải nghiệm bởi chính đội ngũ luật sư chúng tôi')
+- breadcrumb :post, @document
+
+#new-posts-show-container
+  article.article
+    header
+      = link_to image_tag(@document.picture.url(:large), class: 'img-responsive'), @document
+      .meta
+        .meta-databread
+          time datetime="#{@document.created_at}" = format_datetime(@document.created_at)
+          span.meta-data__separator |
+          span.meta-data__author = @document.user.name
+          span.meta-data__separator |
+          span.meta-data__categories = @document.category.name
+      h2.title
+        = link_to @document.title, document_url(@document)
+    
+    .entry-content
+      p == @document.content
