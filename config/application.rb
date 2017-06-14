@@ -33,7 +33,7 @@ module Khanghai
     config.active_record.raise_in_transactional_callbacks = true
     config.active_record.default_timezone = :local
     I18n.available_locales = [:en, :vi]
-    config.time_zone = 'Hanoi'
+    config.time_zone = "Asia/Ho_Chi_Minh"
     config.i18n.default_locale = :vi
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     config.assets.precompile += Ckeditor.assets
