@@ -29,6 +29,9 @@
                   th = t('post.name')
                   td = link_to @post.user.name, '#'
                 tr
+                  th Mô tả
+                  td = @post.description
+                tr
                   th = t('post.content')
                   td == @post.content
                 tr
