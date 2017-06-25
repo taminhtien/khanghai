@@ -6,4 +6,4 @@
       .latest-new__content
         h4.latest-new__title
           = link_to post.title, post_path(post)
-        .latest-news__excerpt == post.description
+        .latest-news__excerpt == truncate(post.description, length: 150, seperator: '')
