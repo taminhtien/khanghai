@@ -5,7 +5,7 @@
 #posts-show-container
   article.article
     header
-      = link_to image_tag(@post.picture.url(:large), class: 'img-responsive'), @post
+      = link_to image_tag(@post.picture.url(:thumb), class: 'img-responsive'), post_url(@post)
       .meta
         .meta-data
           time datetime="#{@post.created_at}" = format_datetime(@post.created_at)
