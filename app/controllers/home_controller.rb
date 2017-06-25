@@ -2,10 +2,10 @@ class HomeController < ApplicationController
   layout 'coming_soon', only: [:coming_soon]
 
   def index
-    @posts = New.order(created_at: :asc).limit(5)
-    @forms = Form.order(created_at: :asc).limit(5)
-    @documents = Document.order(created_at: :asc).limit(5)
-    @question_and_answers = QuestionAndAnswer.order(created_at: :asc).limit(5)
+    @posts = New.order(id: :desc).limit(5)
+    @forms = Form.order(id: :desc).limit(5)
+    @documents = Document.order(id: :desc).limit(5)
+    @question_and_answers = QuestionAndAnswer.order(id: :desc).limit(5)
     @services = Service.all.order(priority: :asc)
     @employees = User.where.not(role: :admin)
   end
