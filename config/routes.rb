@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     resources :contracts
     resources :services
     resources :posts
-    resources :forms
+    # resources :forms
     resources :contacts
     resources :categories
     resources :users

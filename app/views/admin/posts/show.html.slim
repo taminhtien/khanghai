@@ -21,7 +21,7 @@
                   td = @post.title
                 tr
                   th = t('post.picture')
-                  td = image_tag @post.picture, class: 'img-responsive'
+                  td = image_tag @post.picture.url(:thumb), class: 'img-responsive'
                 tr
                   th = t('post.category')
                   td = link_to @post.category.name, admin_category_path(@post.category)

@@ -39,17 +39,4 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
-  config.paperclip_defaults = {
-    storage: :s3,
-    s3_protocol: 'https',
-    s3_region: Rails.application.secrets.aws_region,
-    url: ":s3_domain_url",
-    path: "/production/:class/:attachment/:id_partition/:style/:filename",
-    s3_credentials: {
-      bucket: 'khanghai',
-      access_key_id:      Rails.application.secrets.s3_access_id,
-      secret_access_key:  Rails.application.secrets.s3_secret_key
-    }
-  }
 end

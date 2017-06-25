@@ -7,16 +7,15 @@
             span.widget-title__inline = t('home_page.forms')
       .col-md-12
         .row
-          .col-md-4
-            = render partial: 'form', locals: { form: @forms[0] } if @forms[0]
-          .col-md-4
-            = render partial: 'form', locals: { form: @forms[1] } if @forms[1]
+          = render partial: 'new', locals: { post: @forms[0] }
+          = render partial: 'new', locals: { post: @forms[1] } if @forms[1]
+
           .col-md-4
             .latest-news__container
               - if @forms.length > 2
                 - @forms[2..-1].each do |form|
                   = link_to form, class: 'latest-news latest-news--inline' do
                     .latest-news__content
-                      h4.latest-news__title = form.title.truncate(50)
+                      h4.latest-news__title = truncate(form.title, length: 100, separator: ' ')
                       .latest-news__full-date = format_datetime(form.created_at)
                 = link_to 'Xem thêm', forms_path, class: 'latest-news latest-news--more-news'

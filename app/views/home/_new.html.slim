@@ -2,8 +2,8 @@
   .col-md-4
     .latest-new
       .latest-new__date = format_datetime(post.created_at)
-      = link_to image_tag(post.picture.url(:large)), post_path(post), class: 'latest-new__image'
+      = link_to image_tag(post.picture.url(:thumb)), post_path(post), class: 'latest-new__image'
       .latest-new__content
         h4.latest-new__title
           = link_to post.title, post_path(post)
-        .latest-news__excerpt == post.content.truncate(200)
+        .latest-news__excerpt == post.description
