@@ -8,7 +8,3 @@
           p
             = link_to about_us_path, class: 'read-more' do
               = fa_icon "long-arrow-right", text: t('home_page.read_more'), right: true
-
-      - @employees.each do |employee|
-        .col-md-3
-          = render partial: 'shared/employee', locals: { employee: employee }

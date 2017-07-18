@@ -7,7 +7,6 @@ class HomeController < ApplicationController
     @documents = Document.order(id: :desc).limit(5)
     @question_and_answers = QuestionAndAnswer.order(id: :desc).limit(5)
     @services = Service.all.order(priority: :asc)
-    @employees = User.where.not(role: :admin)
   end
 
   def coming_soon; end

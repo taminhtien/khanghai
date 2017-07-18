@@ -1,4 +1,4 @@
-@import 'bootstrap-sprockets';
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-material-design";
 @import "font-awesome";
@@ -33,3 +33,4 @@
 @import "posts/post";
 @import "posts/show";
 @import "posts/index";
+@import "devise/sessions/new";

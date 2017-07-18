@@ -1,0 +1,16 @@
+#devise-sessions-new-container, #devise-passwords-new-container, #devise-passwords-new-container {
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  label {
+    color: $darkder-putty;
+  }
+
+  .checkbox-material {
+    margin-right: 10px;
+  }
+
+  .btn.btn-raised.btn-default {
+    background: $pavlova;
+  }
+}

@@ -35,6 +35,8 @@ gem 'mina', '~> 0.3.8'
 gem 'rails_utils'
 gem 'bootstrap-datepicker-rails'
 gem 'cocoon'
+gem 'rails_admin', '~> 1.2'
+gem 'rails_admin-i18n'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -47,6 +49,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'byebug'
   gem 'dotenv-rails'
+  gem 'letter_opener'
 end
 
 group :development do

@@ -18,4 +18,16 @@ class Service < ActiveRecord::Base
       [:title, :id]
     ]
   end
+
+  rails_admin do
+    edit do
+      include_all_fields
+      field :title
+      field :picture
+      field :priority
+      field :short_description
+      field :content, :ck_editor
+      exclude_fields :slug
+    end
+  end
 end

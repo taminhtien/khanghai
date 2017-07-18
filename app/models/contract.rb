@@ -8,11 +8,22 @@ class Contract < ActiveRecord::Base
   enumerize :type, in: [:civil, :criminal, :land, :administration, :labor, :others]
   accepts_nested_attributes_for :contract_attachments, reject_if: :all_blank, allow_destroy: true
 
-  validates :customer_id, presence: true
+  validates :customer, presence: true
   validates :code, presence: true
   validates :type, presence: true
   validates :summary, presence: true
   validates :requirement, presence: true
   validates :development, presence: true
   validates :assignee, presence: true
+
+  rails_admin do
+    edit do
+      include_all_fields
+      field :summary, :ck_editor
+      field :requirement, :ck_editor
+      field :development, :ck_editor
+      field :result, :ck_editor
+      field :action, :ck_editor
+    end
+  end
 end

@@ -1,6 +1,8 @@
 FactoryGirl.define do
   factory :user do
-    name 'Admin'
+    first_name 'Admin'
+    last_name 'Ta'
+    job_title 'Admin'
     email 'admin@example.com'
     password '123123123'
     role :admin

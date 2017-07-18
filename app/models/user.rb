@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
   validates_attachment :picture, content_type: { content_type: /\Aimage\/.*\Z/ },
                                  size:         { less_than: 5.megabyte }
 
-  validates :picture, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :role, presence: true

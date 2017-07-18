@@ -22,7 +22,7 @@ vi:
         mr: 'Ông'
         mrs: 'Bà'
         ms: 'Cô'
-  active_record:
+  activerecord:
     attributes:
       customer:
         name: 'Họ và Tên'
@@ -30,6 +30,9 @@ vi:
         contact_address: 'Địa chỉ liên hệ'
         phone_number: 'Số điện thoại'
         birthday: 'Năm sinh'
+        created_at: 'Ngày tạo'
+        updated_at: 'Lần cuối cập nhật'
+        contracts: 'Hợp đồng'
       service:
         title: 'Tiêu đề'
         short_description: 'Mô tả'
@@ -37,14 +40,20 @@ vi:
         picture: 'Ảnh minh họa'
         slug: 'Đường dẫn URL'
         priority: 'Thứ tự'
+        created_at: 'Ngày tạo'
+        updated_at: 'Lần cuối cập nhật'
       post:
         type: 'Loại bài viết'
         title: 'Tiêu đề'
-        category_id: 'Thư mục'
-        user_id: 'Tác giả'
+        category: 'Thư mục'
+        user: 'Người viết bài'
         content: 'Nội dung'
         picture: 'Ảnh minh họa'
         slug: 'Đường dẫn URL'
+        description: 'Mô tả ngắn'
+        attachment: 'Đính kèm'
+        created_at: 'Ngày tạo'
+        updated_at: 'Lần cuối cập nhật'
       form:
         title: 'Tiêu đề'
         category_id: 'Thư mục'
@@ -58,6 +67,8 @@ vi:
         phone_number: 'Số điện thoại'
         subject: 'Chủ đề'
         message: 'Nội dung'
+        created_at: 'Ngày tạo'
+        updated_at: 'Lần cuối cập nhật'
       user:
         email: 'Email'
         salutation: 'Danh xưng'
@@ -74,6 +85,8 @@ vi:
         linkedin_url: 'Địa chỉ Linkedin'
       category:
         name: 'Tên thư mục'
+        created_at: 'Ngày tạo'
+        updated_at: 'Lần cuối cập nhật'
       contract:
         code: 'Mã hợp đồng'
         customer: 'Khách hàng'
@@ -89,6 +102,9 @@ vi:
         development: 'Diễn biến vụ việc'
         result: 'Kết quả'
         action: 'Hành động'
+        type: 'Loại'
+        created_at: 'Ngày tạo'
+        updated_at: 'Lần cuối cập nhật'
       contract_attachment:
         attachment: 'Đính kèm'
   customer:
